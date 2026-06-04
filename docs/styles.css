@@ -421,6 +421,20 @@ footer {
 .confidence-btn.selected[data-confidence="unsure"] { background: #fef9c3; border-color: #fde047; }
 .confidence-btn.selected[data-confidence="guess"]  { background: #fee2e2; border-color: #fca5a5; }
 
+/* ── Nav auth link ── */
+.nav-auth-link {
+  margin-left: 0.25rem;
+  padding: 0.25rem 0.75rem !important;
+  border: 1px solid var(--primary) !important;
+  border-radius: 20px;
+  color: var(--primary) !important;
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.nav-auth-link:hover { background: var(--primary); color: #fff !important; }
+.nav-auth-link.active { background: var(--primary); color: #fff !important; }
+
 /* ── Email capture ── */
 .email-capture-card { background: var(--surface-soft); border: 1px solid var(--line); }
 .email-capture-inner { display: flex; flex-direction: column; gap: 0.75rem; }

@@ -16,6 +16,7 @@
         <a class="active" href="quiz.html">Quiz</a>
         <a href="faq.html">FAQ</a>
         <a href="cram-plan.html">3-Day Plan</a>
+        <a href="login.html" class="nav-auth-link" id="nav-auth">Sign In</a>
       </nav>
     </div>
   </header>
@@ -471,19 +472,34 @@
 
     function renderAuthChip() {
       const chip = document.getElementById('auth-chip');
+      const navAuth = document.getElementById('nav-auth');
       const user = supabase.auth.getUser();
       if (user) {
+        // Nav: show truncated email + sign out
+        if (navAuth) {
+          navAuth.textContent = user.email.split('@')[0];
+          navAuth.href = '#';
+          navAuth.title = `Signed in as ${user.email}`;
+          navAuth.onclick = async (e) => {
+            e.preventDefault();
+            await supabase.auth.signOut();
+            localStorage.removeItem(HISTORY_KEY);
+            renderAuthChip();
+            renderHistory();
+          };
+        }
         chip.innerHTML = `<div class="auth-chip">
           <span>Syncing as <strong>${user.email}</strong></span>
           <button id="signout-btn" class="history-clear">Sign out</button>
         </div>`;
         document.getElementById('signout-btn').addEventListener('click', async () => {
           await supabase.auth.signOut();
-          localStorage.removeItem(HISTORY_KEY); // clear local so next user starts fresh
+          localStorage.removeItem(HISTORY_KEY);
           renderAuthChip();
           renderHistory();
         });
       } else {
+        if (navAuth) { navAuth.textContent = 'Sign In'; navAuth.href = 'login.html'; navAuth.onclick = null; }
         chip.innerHTML = `<div class="auth-chip">
           <span style="color:var(--muted);font-size:0.85rem;">Progress saved on this device only.</span>
           <a href="login.html" class="history-clear" style="text-decoration:none;">Sign in to sync →</a>
