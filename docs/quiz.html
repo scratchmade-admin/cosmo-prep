@@ -484,13 +484,7 @@
           navAuth.textContent = 'Account';
           navAuth.href = 'account.html';
           navAuth.title = `Signed in as ${user.email}`;
-          navAuth.onclick = async (e) => {
-            e.preventDefault();
-            await supabase.auth.signOut();
-            localStorage.removeItem(HISTORY_KEY);
-            renderAuthChip();
-            renderHistory();
-          };
+          navAuth.onclick = null;
         }
         chip.innerHTML = `<div class="auth-chip">
           <span>Syncing as <strong>${user.email}</strong></span>
