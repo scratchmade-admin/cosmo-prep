@@ -367,3 +367,13 @@ footer {
   .grid-3,
   .grid-4 { grid-template-columns: 1fr; }
 }
+
+.review-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.review-link:hover { text-decoration: underline; }

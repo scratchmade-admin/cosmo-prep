@@ -46,6 +46,7 @@
           <p id="quiz-score" class="lead"></p>
           <p id="quiz-summary"></p>
           <div id="topic-breakdown" class="grid-2"></div>
+          <div id="study-next" class="card" style="margin-top:1.5rem;"></div>
           <div class="quiz-controls" style="margin-top: 18px;">
             <button class="button button-secondary" type="button" id="new-set">Load a new set</button>
             <button class="button button-secondary" type="button" id="reset-quiz">Retake this set</button>
@@ -71,6 +72,18 @@
   </footer>
 
   <script>
+    const topicLinks = {
+      'sanitation':           'study-guide.html#module-1',
+      'law-and-safety':       'study-guide.html#module-2',
+      'hair-fundamentals':    'study-guide.html#module-3',
+      'shampoo-and-draping':  'study-guide.html#module-4',
+      'haircutting':          'study-guide.html#module-5',
+      'styling':              'study-guide.html#module-5',
+      'chemical-services':    'study-guide.html#module-6',
+      'skin-and-nails':       'study-guide.html#module-7',
+      'anatomy-and-chemistry':'study-guide.html#module-8',
+    };
+
     const topicLabels = {
       'sanitation': 'Sanitation',
       'law-and-safety': 'Law & Safety',
@@ -224,13 +237,35 @@
           if (pct < 60) advice = 'Needs work. Review this topic next.';
           else if (pct < 80) advice = 'Pretty close. Tighten the weak spots here.';
 
+          const link = topicLinks[topic];
           card.innerHTML = `
             <h3>${topicLabels[topic] || topic}</h3>
             <p><strong>${data.correct}/${data.total} correct</strong> · ${pct}%</p>
             <p>${advice}</p>
+            ${link ? `<a href="${link}" class="review-link">Review this topic →</a>` : ''}
           `;
           topicBreakdown.appendChild(card);
         });
+    }
+
+    function buildStudyNext(stats) {
+      const studyNext = document.getElementById('study-next');
+      const weak = Object.entries(stats)
+        .map(([topic, data]) => ({ topic, pct: Math.round((data.correct / data.total) * 100) }))
+        .filter(t => t.pct < 80)
+        .sort((a, b) => a.pct - b.pct)
+        .slice(0, 3);
+
+      if (weak.length === 0) {
+        studyNext.innerHTML = '<h3>What to study next</h3><p>You are in good shape across all topics. Light review is all you need before the exam.</p>';
+      } else {
+        const items = weak.map((t, i) => {
+          const link = topicLinks[t.topic];
+          const label = topicLabels[t.topic] || t.topic;
+          return `<li>${i + 1}. <strong>${label}</strong> (${t.pct}%) ${link ? `— <a href="${link}" class="review-link">Review in study guide →</a>` : ''}</li>`;
+        }).join('');
+        studyNext.innerHTML = `<h3>What to study next</h3><p>Focus on these topics first, in order:</p><ol style="padding-left:1.2rem;margin-top:0.5rem;">${items}</ol>`;
+      }
     }
 
     form.addEventListener('submit', (event) => {
@@ -267,6 +302,7 @@
       scoreText.textContent = `${score} out of ${currentQuestions.length}`;
       summaryText.textContent = buildSummary(score, answered);
       buildTopicBreakdown(topicStats);
+      buildStudyNext(topicStats);
       resultBox.classList.remove('hidden');
       resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
