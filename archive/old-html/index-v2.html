@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>California Cosmetology Written Exam Prep</title>
+  <meta name="description" content="Independent California cosmetology written exam prep with study modules, practice questions, mock exams, and clear explanations." />
+  <style>
+    :root {
+      --bg: #fffaf8;
+      --surface: #ffffff;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --line: #ecd8de;
+      --primary: #be185d;
+      --primary-soft: #fce7f3;
+      --accent: #7c2d12;
+      --shadow: 0 12px 30px rgba(31, 41, 55, 0.06);
+      --radius: 18px;
+      --max: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .topbar {
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(236, 216, 222, 0.7);
+      background: rgba(255, 250, 248, 0.92);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav a {
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 72px 0 40px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin: 0 0 14px;
+    }
+
+    h1 { font-size: clamp(2.3rem, 5vw, 4rem); }
+    h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-top: 0; }
+    h3 { font-size: 1.15rem; }
+
+    p {
+      margin: 0 0 16px;
+      font-size: 1.02rem;
+    }
+
+    .lead {
+      font-size: 1.18rem;
+      color: #374151;
+      max-width: 700px;
+    }
+
+    .muted { color: var(--muted); }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 24px 0 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 2px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--primary);
+      border-color: #f3b3cb;
+    }
+
+    .panel, .card, .faq-item, .path-step {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .panel {
+      padding: 24px;
+    }
+
+    .hero-card ul,
+    .checklist,
+    .module-list {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .hero-card li,
+    .checklist li,
+    .module-list li {
+      margin-bottom: 10px;
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin: 12px 0 56px;
+    }
+
+    .trust-item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-weight: 600;
+      color: #374151;
+      text-align: center;
+    }
+
+    section {
+      padding: 26px 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 22px;
+    }
+
+    .grid-3,
+    .grid-2,
+    .path-grid,
+    .faq-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .path-grid { grid-template-columns: repeat(5, 1fr); }
+
+    .card {
+      padding: 22px;
+    }
+
+    .card p:last-child,
+    .faq-item p:last-child,
+    .path-step p:last-child,
+    .panel p:last-child { margin-bottom: 0; }
+
+    .card strong,
+    .path-step strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    .split-callout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .path-step {
+      padding: 18px;
+    }
+
+    .step-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .faq-item {
+      padding: 20px;
+    }
+
+    .disclaimer,
+    .final-cta {
+      padding: 28px;
+    }
+
+    .final-cta {
+      background: linear-gradient(135deg, #ffffff 0%, #fff1f5 100%);
+    }
+
+    footer {
+      padding: 28px 0 52px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .split-callout,
+      .grid-3,
+      .grid-2,
+      .path-grid,
+      .trust-strip {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">California Cosmetology Prep</div>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#included">What’s Included</a>
+        <a href="#study-path">Study Path</a>
+        <a href="#sample-quiz">Free Quiz</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Independent California written exam prep</div>
+          <h1>California cosmetology written exam prep that gives you a clear way to study</h1>
+          <p class="lead">Stop piecing things together from random notes and generic question banks. Get a California-focused study path with plain-English lessons, practice questions, and clear next steps.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#sample-quiz">Take the Free Sample Quiz</a>
+            <a class="btn btn-secondary" href="#included">See What’s Included</a>
+          </div>
+          <p class="muted">Built for students preparing for the California cosmetology written licensing exam.</p>
+        </div>
+
+        <aside class="panel hero-card" aria-label="What you get">
+          <h3>What you get</h3>
+          <ul>
+            <li>8 core study modules</li>
+            <li>Topic quizzes and mixed review tests</li>
+            <li>1 full mock exam</li>
+            <li>Answer explanations that teach the reasoning</li>
+            <li>3-day and 7-day study plans</li>
+            <li>50 free sample questions to start</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="trust-strip" aria-label="Trust points">
+        <div class="trust-item">California-focused topics</div>
+        <div class="trust-item">Real practice with explanations</div>
+        <div class="trust-item">Simple mobile-friendly format</div>
+        <div class="trust-item">Not an official board website</div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Study with more structure and less guesswork</h2>
+          <p>A lot of students are not short on effort. They are short on a clean study system. This prep is designed to help you spend less time wandering and more time improving.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <strong>Focus on the right topics</strong>
+            <p>Review the written exam categories most students actually need to tighten up, especially sanitation, law, safety, and chemical services.</p>
+          </div>
+          <div class="card">
+            <strong>Practice and review fast</strong>
+            <p>Use shorter quizzes for quick study sessions or longer mixed tests when you want a more realistic review block.</p>
+          </div>
+          <div class="card">
+            <strong>See weak spots clearly</strong>
+            <p>Missed questions come with explanations, so you can figure out what went wrong instead of just collecting wrong answers.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="included">
+        <div class="section-head">
+          <h2>What’s included</h2>
+          <p>Everything needed for a credible MVP study tool, without pretending to be more than it is.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <strong>Study modules</strong>
+            <p>Eight focused lessons covering the core written exam areas in clear, manageable sections.</p>
+          </div>
+          <div class="card">
+            <strong>Practice questions</strong>
+            <p>Topic quizzes, mixed review sets, and a full mock exam to help you build recall under test-like conditions.</p>
+          </div>
+          <div class="card">
+            <strong>Answer explanations</strong>
+            <p>Short explanations that show why an answer is right and what to watch for next time.</p>
+          </div>
+          <div class="card">
+            <strong>Free sample quiz</strong>
+            <p>Try the format first with free questions before deciding whether to unlock the full prep.</p>
+          </div>
+          <div class="card">
+            <strong>Cram plans</strong>
+            <p>Use a 3-day or 7-day review plan when your exam date is coming up faster than you would prefer.</p>
+          </div>
+          <div class="card">
+            <strong>Simple study flow</strong>
+            <p>No clutter, no complicated dashboard, just a straightforward path from lesson to quiz to review.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="split-callout">
+          <div class="panel">
+            <h2>What you’ll study</h2>
+            <p class="muted">Built around the core topics California cosmetology students need to review for the written exam.</p>
+            <ol class="module-list">
+              <li>Infection control and sanitation</li>
+              <li>California law and professional safety</li>
+              <li>Hair and scalp care</li>
+              <li>Shampooing, conditioning, and draping</li>
+              <li>Haircutting and hairstyling</li>
+              <li>Chemical services</li>
+              <li>Skin care and nail care basics</li>
+              <li>Anatomy, chemistry, and test strategy</li>
+            </ol>
+          </div>
+          <div class="panel">
+            <h2>Why this format works</h2>
+            <ul class="checklist">
+              <li>Plain-English review instead of dense notes</li>
+              <li>Short sessions that fit around class, work, or salon hours</li>
+              <li>Practice that shows what you missed</li>
+              <li>Useful for steady study or last-minute cleanup</li>
+              <li>California-specific positioning without sounding official</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="study-path">
+        <div class="section-head">
+          <h2>A simple study path from overwhelmed to ready</h2>
+          <p>You do not need to study everything equally. You need a sensible order, enough repetition, and honest feedback on what still needs work.</p>
+        </div>
+        <div class="path-grid">
+          <div class="path-step">
+            <div class="step-num">1</div>
+            <strong>Learn one topic</strong>
+            <p>Start with one short module in plain language.</p>
+          </div>
+          <div class="path-step">
+            <div class="step-num">2</div>
+            <strong>Take a quick quiz</strong>
+            <p>Check what stuck while the material is still fresh.</p>
+          </div>
+          <div class="path-step">
+            <div class="step-num">3</div>
+            <strong>Review missed answers</strong>
+            <p>Use the explanations to fix the reasoning, not just memorize the choice.</p>
+          </div>
+          <div class="path-step">
+            <div class="step-num">4</div>
+            <strong>Repeat weak areas</strong>
+            <p>Spend extra time where your scores keep slipping.</p>
+          </div>
+          <div class="path-step">
+            <div class="step-num">5</div>
+            <strong>Finish with a mock exam</strong>
+            <p>Use a longer mixed test before the real thing.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="sample-quiz">
+        <div class="panel final-cta">
+          <h2>Try a free sample quiz before you commit</h2>
+          <p>If you want to know whether the questions feel useful, start there. It is the quickest way to check the style, level, and overall fit before paying for the full prep.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#">Take the Free Sample Quiz</a>
+            <a class="btn btn-secondary" href="#">Get Full Access</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="section-head">
+          <h2>FAQ</h2>
+        </div>
+        <div class="faq-grid grid-2">
+          <div class="faq-item">
+            <h3>Is this the official California state board website?</h3>
+            <p>No. This is an independent exam-prep resource. It is not affiliated with, endorsed by, or operated by the California state board or any government agency.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is this for the written cosmetology exam only?</h3>
+            <p>Yes. This version is focused on helping students prepare for the California cosmetology written licensing exam.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Does it include practice questions?</h3>
+            <p>Yes. The MVP includes free sample questions, topic quizzes, mixed review, and a full mock exam.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I study on my phone?</h3>
+            <p>Yes. The site is designed to be simple, readable, and mobile-friendly.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How should I use it if my exam is soon?</h3>
+            <p>Start with the free sample quiz, spot your weak areas, then use the 3-day or 7-day plan to review in a more focused way.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is this enough by itself?</h3>
+            <p>It is designed as a focused prep tool, not a replacement for official licensing information. Students should still verify current requirements and exam details with the appropriate California authority.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="panel disclaimer">
+          <h2>Important disclaimer</h2>
+          <p>This website is an independent study resource for students preparing for the California cosmetology written licensing exam. It is not affiliated with, endorsed by, approved by, or operated by the California Board of Barbering and Cosmetology or any government agency. Students should confirm official licensing requirements, policies, and exam information through the appropriate California authority.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="panel final-cta">
+          <h2>Get a clearer study plan before test day</h2>
+          <p>If you want a calmer way to prepare, start with the free sample quiz. See how the questions feel, find your weak spots, and decide whether the full prep is worth it for you.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#">Take the Free Sample Quiz</a>
+            <a class="btn btn-secondary" href="#">Unlock Full Access</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Independent California cosmetology written exam prep. Practical, clear, and not pretending to be the board.
+    </div>
+  </footer>
+</body>
+</html>

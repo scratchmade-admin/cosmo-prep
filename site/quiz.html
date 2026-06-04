@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Practice Quiz | California Cosmetology Prep</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html">California Cosmetology Prep</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="study-guide.html">Study Guide</a>
+        <a class="active" href="quiz.html">Quiz</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero-simple">
+      <div class="eyebrow">Rotating 20-question mixed quiz</div>
+      <h1>Take a fuller practice quiz</h1>
+      <p class="lead">This version pulls a fresh 20-question mix from a larger quiz bank so Melissa is not staring at the same exact set forever. You’ll still get instant scoring, explanations, and topic feedback so the next study step is obvious.</p>
+    </section>
+
+    <section>
+      <div class="wrap quiz-shell">
+        <article class="card">
+          <div class="quiz-meta">
+            <span class="pill">20 questions</span>
+            <span class="pill">Rotating pool</span>
+            <span class="pill">Instant scoring</span>
+            <span class="pill">Topic feedback</span>
+          </div>
+          <h2>Practice quiz</h2>
+          <p id="quiz-intro">Loading a fresh mixed set...</p>
+        </article>
+
+        <form id="quiz-form"></form>
+
+        <article class="card hidden" id="quiz-result">
+          <h2>Your results</h2>
+          <p id="quiz-score" class="lead"></p>
+          <p id="quiz-summary"></p>
+          <div id="topic-breakdown" class="grid-2"></div>
+          <div class="quiz-controls" style="margin-top: 18px;">
+            <button class="button button-secondary" type="button" id="new-set">Load a new set</button>
+            <button class="button button-secondary" type="button" id="reset-quiz">Retake this set</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap cta-panel">
+        <h2>How to use this well</h2>
+        <p>Do not just look at the score and move on. Review the misses, notice the topic patterns, then go back to the study-guide sections where you were weakest. That part matters more than the number.</p>
+        <div class="actions">
+          <a class="button button-primary" href="study-guide.html">Review the study guide</a>
+          <a class="button button-secondary" href="index.html">Back to home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Independent California exam prep. Not official board material.</div>
+  </footer>
+
+  <script>
+    const topicLabels = {
+      'sanitation': 'Sanitation',
+      'law-and-safety': 'Law & Safety',
+      'hair-fundamentals': 'Hair Fundamentals',
+      'haircutting': 'Haircutting',
+      'styling': 'Styling',
+      'shampoo-and-draping': 'Shampoo & Draping',
+      'chemical-services': 'Chemical Services',
+      'anatomy-and-chemistry': 'Anatomy & Chemistry'
+    };
+
+    const targetMix = {
+      sanitation: 4,
+      'law-and-safety': 4,
+      'chemical-services': 5,
+      'hair-fundamentals': 3,
+      haircutting: 1,
+      styling: 1,
+      'shampoo-and-draping': 1,
+      'anatomy-and-chemistry': 1
+    };
+
+    const form = document.getElementById('quiz-form');
+    const resultBox = document.getElementById('quiz-result');
+    const scoreText = document.getElementById('quiz-score');
+    const summaryText = document.getElementById('quiz-summary');
+    const topicBreakdown = document.getElementById('topic-breakdown');
+    const introText = document.getElementById('quiz-intro');
+    const resetButton = document.getElementById('reset-quiz');
+    const newSetButton = document.getElementById('new-set');
+
+    let questionBank = [];
+    let currentQuestions = [];
+
+    function shuffle(array) {
+      const copy = [...array];
+      for (let i = copy.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function buildQuestionSet() {
+      const byTopic = {};
+      questionBank.forEach((q) => {
+        if (!byTopic[q.topic]) byTopic[q.topic] = [];
+        byTopic[q.topic].push(q);
+      });
+
+      let selected = [];
+      Object.entries(targetMix).forEach(([topic, count]) => {
+        const pool = shuffle(byTopic[topic] || []);
+        selected = selected.concat(pool.slice(0, count));
+      });
+
+      if (selected.length < 20) {
+        const selectedIds = new Set(selected.map((q) => q.id));
+        const leftovers = shuffle(questionBank.filter((q) => !selectedIds.has(q.id)));
+        selected = selected.concat(leftovers.slice(0, 20 - selected.length));
+      }
+
+      return shuffle(selected).slice(0, 20);
+    }
+
+    function renderQuiz() {
+      form.innerHTML = '';
+      resultBox.classList.add('hidden');
+      scoreText.textContent = '';
+      summaryText.textContent = '';
+      topicBreakdown.innerHTML = '';
+
+      currentQuestions.forEach((question, index) => {
+        const article = document.createElement('article');
+        article.className = 'question';
+        article.dataset.question = String(index);
+        article.dataset.correct = question.correct;
+        article.dataset.topic = question.topic;
+
+        const optionsHtml = Object.entries(question.options).map(([key, value]) => {
+          return `<button type="button" class="quiz-option" data-value="${key}">${key}. ${value}</button>`;
+        }).join('');
+
+        article.innerHTML = `
+          <div class="kicker">Question ${index + 1} • ${topicLabels[question.topic] || question.topic} • ${question.difficulty}</div>
+          <h3>${question.prompt}</h3>
+          ${optionsHtml}
+          <div class="quiz-feedback hidden">
+            <p><strong>Correct answer:</strong> ${question.correct}</p>
+            <p>${question.explanation}</p>
+          </div>
+          <input type="hidden" name="q${index}" value="" />
+        `;
+
+        form.appendChild(article);
+
+        const hiddenInput = article.querySelector('input[type="hidden"]');
+        const options = Array.from(article.querySelectorAll('.quiz-option'));
+        options.forEach((option) => {
+          option.addEventListener('click', () => {
+            options.forEach((btn) => btn.classList.remove('selected'));
+            option.classList.add('selected');
+            hiddenInput.value = option.dataset.value;
+          });
+        });
+      });
+
+      const controls = document.createElement('article');
+      controls.className = 'card';
+      controls.innerHTML = `
+        <div class="quiz-controls">
+          <button class="button button-primary" type="submit">Submit quiz</button>
+        </div>
+      `;
+      form.appendChild(controls);
+
+      const summaryBits = {};
+      currentQuestions.forEach((q) => {
+        summaryBits[q.topic] = (summaryBits[q.topic] || 0) + 1;
+      });
+      const summary = Object.entries(summaryBits)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 4)
+        .map(([topic, count]) => `${topicLabels[topic] || topic} (${count})`)
+        .join(' • ');
+      introText.textContent = `This set is weighted toward the high-value written-exam topics. In this round: ${summary}.`;
+    }
+
+    function buildSummary(score, answered) {
+      if (answered < currentQuestions.length) {
+        return 'You can submit partially, but the whole point is seeing the real pattern. Finish all 20 if you want the results to mean something.';
+      }
+      const pct = (score / currentQuestions.length) * 100;
+      if (pct >= 90) return 'Very solid. At that point the job is tightening misses, not reinventing your whole study plan.';
+      if (pct >= 80) return 'Good place to be. You are close, but the weak topics still deserve deliberate review.';
+      if (pct >= 70) return 'Decent base. Now turn the misses into a study list instead of just taking another quiz immediately.';
+      return 'Useful result, even if it stings. Start with sanitation, law, and chemical safety. Those are high-value areas.';
+    }
+
+    function buildTopicBreakdown(stats) {
+      topicBreakdown.innerHTML = '';
+      Object.entries(stats)
+        .sort((a, b) => (a[1].correct / a[1].total) - (b[1].correct / b[1].total))
+        .forEach(([topic, data]) => {
+          const pct = Math.round((data.correct / data.total) * 100);
+          const card = document.createElement('div');
+          card.className = 'card';
+          let advice = 'Keep this warm with light review.';
+          if (pct < 60) advice = 'Needs work. Review this topic next.';
+          else if (pct < 80) advice = 'Pretty close. Tighten the weak spots here.';
+
+          card.innerHTML = `
+            <h3>${topicLabels[topic] || topic}</h3>
+            <p><strong>${data.correct}/${data.total} correct</strong> · ${pct}%</p>
+            <p>${advice}</p>
+          `;
+          topicBreakdown.appendChild(card);
+        });
+    }
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      let score = 0;
+      let answered = 0;
+      const topicStats = {};
+
+      Array.from(document.querySelectorAll('.question')).forEach((questionEl, index) => {
+        const q = currentQuestions[index];
+        const chosen = questionEl.querySelector('input[type="hidden"]').value;
+        const options = Array.from(questionEl.querySelectorAll('.quiz-option'));
+        const feedback = questionEl.querySelector('.quiz-feedback');
+
+        if (!topicStats[q.topic]) topicStats[q.topic] = { correct: 0, total: 0 };
+        topicStats[q.topic].total += 1;
+
+        options.forEach((option) => {
+          option.classList.remove('correct', 'incorrect');
+          if (option.dataset.value === q.correct) option.classList.add('correct');
+          if (chosen && option.dataset.value === chosen && chosen !== q.correct) option.classList.add('incorrect');
+        });
+
+        if (chosen) answered += 1;
+        if (chosen === q.correct) {
+          score += 1;
+          topicStats[q.topic].correct += 1;
+        }
+
+        feedback.classList.remove('hidden');
+      });
+
+      scoreText.textContent = `${score} out of ${currentQuestions.length}`;
+      summaryText.textContent = buildSummary(score, answered);
+      buildTopicBreakdown(topicStats);
+      resultBox.classList.remove('hidden');
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    resetButton.addEventListener('click', () => renderQuiz());
+    newSetButton.addEventListener('click', () => {
+      currentQuestions = buildQuestionSet();
+      renderQuiz();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    fetch('quiz-data-rotation.json')
+      .then((response) => response.json())
+      .then((data) => {
+        questionBank = data;
+        currentQuestions = buildQuestionSet();
+        renderQuiz();
+      })
+      .catch(() => {
+        introText.textContent = 'The rotating quiz bank failed to load. Refresh and try again.';
+      });
+  </script>
+</body>
+</html>

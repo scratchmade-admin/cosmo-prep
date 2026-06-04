@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>California Cosmetology Written Exam Prep</title>
+  <meta name="description" content="Independent California cosmetology written exam prep with study modules, practice questions, mock exams, and practical explanations." />
+  <style>
+    :root {
+      --bg: #fcfaf7;
+      --surface: #ffffff;
+      --surface-soft: #f6f1eb;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --line: #e6ddd2;
+      --primary: #8b5cf6;
+      --primary-dark: #6d28d9;
+      --accent: #b45309;
+      --shadow: 0 14px 40px rgba(31, 41, 55, 0.08);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(252, 250, 247, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(230, 221, 210, 0.9);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-size: 1rem;
+    }
+
+    .nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav a {
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 76px 0 44px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #f3e8ff;
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 0.86rem;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 14px;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      max-width: 12ch;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .hero-copy p {
+      max-width: 58ch;
+      font-size: 1.06rem;
+    }
+
+    .hero-card,
+    .card,
+    .faq-item,
+    .path-step,
+    .mode,
+    .topic-list,
+    .cta-panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 26px;
+    }
+
+    .hero-card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--ink);
+    }
+
+    .hero-card li + li {
+      margin-top: 10px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 26px 0 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+
+    .button-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .button-secondary {
+      background: white;
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    .meta-strip {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .pill {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--surface-soft);
+      color: var(--ink);
+      font-size: 0.92rem;
+      border: 1px solid var(--line);
+    }
+
+    section {
+      padding: 32px 0;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 22px;
+      max-width: 64ch;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .card,
+    .mode,
+    .path-step,
+    .faq-item,
+    .topic-list,
+    .cta-panel {
+      padding: 22px;
+    }
+
+    .card p:last-child,
+    .mode p:last-child,
+    .path-step p:last-child,
+    .faq-item p:last-child,
+    .cta-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .number {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: #f3e8ff;
+      color: var(--primary-dark);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .topic-list ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .topic-list li + li {
+      margin-top: 8px;
+    }
+
+    .cta-panel {
+      background: linear-gradient(135deg, #ffffff 0%, #f8f1ff 100%);
+    }
+
+    .disclaimer {
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 28px 0 50px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .grid-2,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">California Cosmetology Prep</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#who-its-for">Who It’s For</a>
+        <a href="#included">What’s Included</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Independent California written-exam prep</div>
+        <h1>Pass the California Cosmetology Written Exam with a clearer study plan</h1>
+        <p>Study the topics that matter, practice with realistic questions, and stop wasting time bouncing between scattered notes, screenshots, and random quiz sets.</p>
+        <div class="actions">
+          <a class="button button-primary" href="#sample">Start Free Practice Quiz</a>
+          <a class="button button-secondary" href="#included">See What’s Included</a>
+        </div>
+        <div class="meta-strip" aria-label="Highlights">
+          <span class="pill">California-focused</span>
+          <span class="pill">Question explanations included</span>
+          <span class="pill">Mobile-friendly study flow</span>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="What students get">
+        <h3>What students get</h3>
+        <ul>
+          <li>8 core study modules</li>
+          <li>Topic quizzes and mixed review</li>
+          <li>Full mock exam practice</li>
+          <li>Answer explanations and weak-area review</li>
+          <li>3-day and 7-day cram plans</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="who-its-for">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Made for students who want structure, not fluff</h2>
+          <p>If the usual study routine is a pile of notes, screenshots, and half-useful practice questions, this gives you a cleaner system.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Good fit for</h3>
+            <p>First-time test takers, repeat test takers, busy students studying around work, and anyone helping someone prepare.</p>
+          </div>
+          <div class="card">
+            <h3>Built to solve</h3>
+            <p>Scattered prep, weak recall, inconsistent practice, and that charming sense that test day is approaching faster than your confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="included">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>A focused prep toolkit for the written exam</h2>
+          <p>This is meant to be a practical study product, not a bloated course catalog.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Study Modules</h3>
+            <p>Eight core modules covering sanitation, law, hair, haircutting, chemical services, skin and nails, and foundational science.</p>
+          </div>
+          <div class="card">
+            <h3>Practice Questions</h3>
+            <p>Topic-based quizzes, mixed review, and longer mock exams with useful explanations.</p>
+          </div>
+          <div class="card">
+            <h3>Review Support</h3>
+            <p>Weak-area review plus short study plans for students who need to tighten things up quickly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>More than one way to study</h2>
+          <p>Different practice modes help students build recall instead of memorizing one pattern.</p>
+        </div>
+        <div class="grid-4">
+          <div class="mode">
+            <h3>Quick Quiz</h3>
+            <p>Short sets for fast review.</p>
+          </div>
+          <div class="mode">
+            <h3>Topic Drill</h3>
+            <p>Focus on one subject at a time.</p>
+          </div>
+          <div class="mode">
+            <h3>Mixed Review</h3>
+            <p>Practice across categories and tighten recall.</p>
+          </div>
+          <div class="mode">
+            <h3>Mock Exam</h3>
+            <p>Take a longer exam-style set before test day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>A simple path from scattered studying to test-ready review</h2>
+          <p>Learn, test, review mistakes, repeat weak areas, then finish with a mock exam.</p>
+        </div>
+        <div class="grid-3">
+          <div class="path-step">
+            <div class="number">1</div>
+            <h3>Learn the basics</h3>
+            <p>Read one module in plain English.</p>
+          </div>
+          <div class="path-step">
+            <div class="number">2</div>
+            <h3>Test yourself right away</h3>
+            <p>Take a short quiz while the material is still fresh.</p>
+          </div>
+          <div class="path-step">
+            <div class="number">3</div>
+            <h3>Review what you missed</h3>
+            <p>Use the explanations to understand the logic, not just the answer.</p>
+          </div>
+          <div class="path-step">
+            <div class="number">4</div>
+            <h3>Repeat weak areas</h3>
+            <p>Spend extra time on sanitation, safety, law, and chemical services if needed.</p>
+          </div>
+          <div class="path-step">
+            <div class="number">5</div>
+            <h3>Finish with a mock exam</h3>
+            <p>Check whether you are actually ready before the real thing.</p>
+          </div>
+          <div class="path-step">
+            <div class="number">6</div>
+            <h3>Study on your schedule</h3>
+            <p>Use short sessions, longer reviews, or a cram plan if the exam is close.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap grid-2">
+        <div class="card">
+          <h2>Why students use it</h2>
+          <p><strong>California-focused</strong> instead of broad generic prep.</p>
+          <p><strong>Clear explanations</strong> instead of bare answer keys.</p>
+          <p><strong>Phone-friendly study flow</strong> that works around real life.</p>
+          <p><strong>Safety-first reasoning</strong> that matches how many licensing questions work.</p>
+        </div>
+        <div class="topic-list">
+          <h2>What you’ll study</h2>
+          <ol>
+            <li>Infection control and sanitation</li>
+            <li>California law and professional safety</li>
+            <li>Hair and scalp care</li>
+            <li>Shampooing, conditioning, and draping</li>
+            <li>Haircutting and hairstyling</li>
+            <li>Chemical services</li>
+            <li>Skin care and nail care basics</li>
+            <li>Anatomy, chemistry, and test strategy</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="sample">
+      <div class="wrap">
+        <div class="cta-panel">
+          <h2>Start with a free practice quiz</h2>
+          <p>The fastest way to see whether this is useful is to try a short sample quiz. You’ll get the feel of the question style, pacing, and explanations before deciding whether to go deeper.</p>
+          <div class="actions">
+            <a class="button button-primary" href="#">Start Free Practice Quiz</a>
+            <a class="button button-secondary" href="#">See Full Access Options</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Frequently asked questions</h2>
+          <p>The usual things students ask before they commit to one more study tool.</p>
+        </div>
+        <div class="grid-2">
+          <div class="faq-item">
+            <h3>Is this the official California state board website?</h3>
+            <p>No. This is an independent exam-prep resource. It is not affiliated with, endorsed by, or operated by the California Board of Barbering and Cosmetology or any government agency.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is this only for the written exam?</h3>
+            <p>Yes. This version is focused on written-exam prep for California cosmetology students.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do I need a textbook to use it?</h3>
+            <p>No. It is designed to work as a standalone prep tool, though some students may still want to use it alongside school materials.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I use it on my phone?</h3>
+            <p>Yes. The layout is designed to stay simple and readable on mobile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap card">
+        <h2>Important disclaimer</h2>
+        <p class="disclaimer">This website is an independent study resource for students preparing for the California cosmetology written licensing exam. It is not affiliated with, endorsed by, approved by, or operated by the California Board of Barbering and Cosmetology or any government agency. Students should confirm current licensing requirements, policies, and official exam information with the appropriate California authority.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cta-panel">
+          <h2>Get a clearer way to study before test day</h2>
+          <p>Start with the free quiz, see where you stand, then decide whether the full prep is worth it for you.</p>
+          <div class="actions">
+            <a class="button button-primary" href="#sample">Start Free Practice Quiz</a>
+            <a class="button button-secondary" href="#included">See What’s Included</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      California Cosmetology Prep is an independent study resource. Not affiliated with or endorsed by the California Board of Barbering and Cosmetology.
+    </div>
+  </footer>
+</body>
+</html>

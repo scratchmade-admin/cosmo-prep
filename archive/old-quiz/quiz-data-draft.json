@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "topic": "sanitation",
+    "prompt": "What is the main purpose of cleaning before disinfection?",
+    "options": {
+      "A": "To color-code tools",
+      "B": "To remove visible dirt and debris",
+      "C": "To sharpen implements",
+      "D": "To dry the station faster"
+    },
+    "correct": "B",
+    "explanation": "Cleaning removes visible soil so disinfectant can work properly on the surface.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 3,
+    "topic": "sanitation",
+    "prompt": "A tool with blood on it should first be:",
+    "options": {
+      "A": "Put back in the drawer",
+      "B": "Rinsed, cleaned, and handled according to blood exposure procedure",
+      "C": "Sprayed with water only",
+      "D": "Shared only with the same client"
+    },
+    "correct": "B",
+    "explanation": "Blood exposure requires proper cleanup, disposal of contaminated materials, and full cleaning and disinfection steps.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 14,
+    "topic": "sanitation",
+    "prompt": "When should a workstation be cleaned and disinfected?",
+    "options": {
+      "A": "Once a week",
+      "B": "Only after chemical spills",
+      "C": "Between clients and whenever contamination occurs",
+      "D": "Only before inspection visits"
+    },
+    "correct": "C",
+    "explanation": "Shared work surfaces should be kept sanitary throughout the day, especially between clients.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 17,
+    "topic": "law-and-safety",
+    "prompt": "A cosmetologist should refuse or postpone a service when the client shows:",
+    "options": {
+      "A": "A hairstyle reference photo",
+      "B": "Signs of a contagious condition in the service area",
+      "C": "Interest in buying retail products",
+      "D": "A request for a shorter appointment"
+    },
+    "correct": "B",
+    "explanation": "Unsafe or contagious conditions are strong reasons to stop and refer out when needed.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 20,
+    "topic": "law-and-safety",
+    "prompt": "If a client reports burning during a chemical service, you should first:",
+    "options": {
+      "A": "Increase the heat",
+      "B": "Ignore it because processing is normal",
+      "C": "Stop and assess the situation safely",
+      "D": "Add more product immediately"
+    },
+    "correct": "C",
+    "explanation": "Burning can signal irritation or chemical injury. Safety comes first.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 26,
+    "topic": "law-and-safety",
+    "prompt": "Why should a cosmetologist avoid making medical diagnoses?",
+    "options": {
+      "A": "Because it takes too long",
+      "B": "Because diagnosis is outside the normal cosmetology role",
+      "C": "Because clients dislike advice",
+      "D": "Because retail sales matter more"
+    },
+    "correct": "B",
+    "explanation": "Cosmetologists may recognize visible issues and refer out, but they should not diagnose disease.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 31,
+    "topic": "hair-structure",
+    "prompt": "Which hair layer provides most of the hair's strength and elasticity?",
+    "options": {
+      "A": "Cuticle",
+      "B": "Cortex",
+      "C": "Medulla",
+      "D": "Arrector pili"
+    },
+    "correct": "B",
+    "explanation": "The cortex is the main structural layer and contains much of the hair's pigment and strength.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 34,
+    "topic": "hair-structure",
+    "prompt": "Hair porosity refers to the hair's ability to:",
+    "options": {
+      "A": "Change natural texture permanently",
+      "B": "Absorb moisture or chemicals",
+      "C": "Grow faster in heat",
+      "D": "Resist cutting pressure"
+    },
+    "correct": "B",
+    "explanation": "Porosity affects how hair takes in and holds moisture or chemical products.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 42,
+    "topic": "sanitation",
+    "prompt": "Before shampooing, you should first:",
+    "options": {
+      "A": "Begin vigorous scrubbing",
+      "B": "Analyze the hair and scalp as appropriate",
+      "C": "Apply relaxer",
+      "D": "Use the hottest water possible"
+    },
+    "correct": "B",
+    "explanation": "A quick analysis helps identify contraindications and product needs.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 50,
+    "topic": "law-and-safety",
+    "prompt": "If shampoo gets into a client's eyes, the first response should be to:",
+    "options": {
+      "A": "Continue the service quickly",
+      "B": "Rinse the eyes immediately and respond safely",
+      "C": "Add conditioner right away",
+      "D": "Dry the hair first"
+    },
+    "correct": "B",
+    "explanation": "Immediate safe response helps reduce irritation and protect the client.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 51,
+    "topic": "haircutting",
+    "prompt": "A stationary guide is best described as a guide that:",
+    "options": {
+      "A": "Moves with every subsection",
+      "B": "Stays in one place while length is built from it",
+      "C": "Is only used for curling",
+      "D": "Creates chemical texture"
+    },
+    "correct": "B",
+    "explanation": "A stationary guide does not move and helps build increasing lengths in some cuts.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 54,
+    "topic": "haircutting",
+    "prompt": "A 90-degree haircut generally creates:",
+    "options": {
+      "A": "Blunt weight line only",
+      "B": "Uniform layers",
+      "C": "A chemical wave pattern",
+      "D": "No movement at all"
+    },
+    "correct": "B",
+    "explanation": "Ninety-degree elevation is commonly associated with uniform layering.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 59,
+    "topic": "styling",
+    "prompt": "Before using a thermal iron, you should first consider the hair's:",
+    "options": {
+      "A": "Favorite product scent",
+      "B": "Condition and ability to handle heat",
+      "C": "Natural growth cycle only",
+      "D": "License display"
+    },
+    "correct": "B",
+    "explanation": "Heat should match the hair type and condition to avoid damage.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 65,
+    "topic": "chemical-services",
+    "prompt": "A patch test is used mainly to help check for:",
+    "options": {
+      "A": "Haircut balance",
+      "B": "Possible sensitivity to a product",
+      "C": "Nail growth rate",
+      "D": "Proper draping angle"
+    },
+    "correct": "B",
+    "explanation": "Patch testing is used before certain services to help detect possible sensitivity reactions.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 67,
+    "topic": "chemical-services",
+    "prompt": "Why is overlapping relaxer onto previously relaxed hair dangerous?",
+    "options": {
+      "A": "It improves smoothness too evenly",
+      "B": "It can cause overprocessing and breakage",
+      "C": "It makes hair too shiny",
+      "D": "It lowers porosity permanently"
+    },
+    "correct": "B",
+    "explanation": "Previously relaxed hair is already processed and is more vulnerable to damage.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 69,
+    "topic": "chemical-services",
+    "prompt": "Which color neutralizes yellow tones?",
+    "options": {
+      "A": "Green",
+      "B": "Violet",
+      "C": "Orange",
+      "D": "Red"
+    },
+    "correct": "B",
+    "explanation": "Violet is opposite yellow on the color wheel.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 75,
+    "topic": "chemical-services",
+    "prompt": "What is the main purpose of neutralizer in many waving services?",
+    "options": {
+      "A": "To remove all shampoo residue only",
+      "B": "To harden the cape",
+      "C": "To help rebuild and lock the hair into its new shape",
+      "D": "To bleach the hair slightly"
+    },
+    "correct": "C",
+    "explanation": "Neutralizer helps reform bonds and stabilize the new curl pattern.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 82,
+    "topic": "chemical-services",
+    "prompt": "If a client wants major lightening on previously damaged hair, the safest answer is to:",
+    "options": {
+      "A": "Promise full results in one session no matter what",
+      "B": "Ignore the condition and proceed quickly",
+      "C": "Reassess, explain the risk, and choose the safer plan",
+      "D": "Use the strongest formula available immediately"
+    },
+    "correct": "C",
+    "explanation": "Safety and hair integrity come before aggressive processing goals.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 93,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "A substance with a pH below 7 is:",
+    "options": {
+      "A": "Neutral",
+      "B": "Acidic",
+      "C": "Alkaline",
+      "D": "Metallic"
+    },
+    "correct": "B",
+    "explanation": "pH values below 7 are acidic.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 96,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "Oxidation-reduction reactions are important in cosmetology because they are involved in:",
+    "options": {
+      "A": "License display only",
+      "B": "Many chemical services such as haircolor processing",
+      "C": "Folding towels only",
+      "D": "Station setup only"
+    },
+    "correct": "B",
+    "explanation": "Redox chemistry is part of how some chemical services work, especially color changes.",
+    "difficulty": "Medium"
+  }
+]

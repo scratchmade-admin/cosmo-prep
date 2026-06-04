@@ -1,0 +1,842 @@
+[
+  {
+    "id": 201,
+    "topic": "sanitation",
+    "prompt": "What is the main purpose of cleaning before disinfection?",
+    "options": {
+      "A": "To color-code tools",
+      "B": "To remove visible dirt and debris",
+      "C": "To sharpen implements",
+      "D": "To dry the station faster"
+    },
+    "correct": "B",
+    "explanation": "Cleaning removes visible soil so disinfectant can work properly on the surface.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 202,
+    "topic": "sanitation",
+    "prompt": "Which item should usually be discarded after one use?",
+    "options": {
+      "A": "Metal pusher",
+      "B": "Shampoo bowl",
+      "C": "Cotton pad",
+      "D": "Plastic cape"
+    },
+    "correct": "C",
+    "explanation": "Cotton and other absorbent disposable items are generally single-use items.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 203,
+    "topic": "sanitation",
+    "prompt": "A tool with blood on it should first be:",
+    "options": {
+      "A": "Put back in the drawer",
+      "B": "Rinsed, cleaned, and handled according to blood exposure procedure",
+      "C": "Sprayed with water only",
+      "D": "Shared only with the same client"
+    },
+    "correct": "B",
+    "explanation": "Blood exposure requires proper cleanup, safe handling, and full cleaning and disinfection steps.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 204,
+    "topic": "sanitation",
+    "prompt": "Which surface is easiest to disinfect properly?",
+    "options": {
+      "A": "Emery board",
+      "B": "Orangewood stick",
+      "C": "Towel",
+      "D": "Nonporous metal implement"
+    },
+    "correct": "D",
+    "explanation": "Nonporous items can generally be cleaned and disinfected more effectively than porous items.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 205,
+    "topic": "sanitation",
+    "prompt": "Handwashing is especially important:",
+    "options": {
+      "A": "Only after chemical services",
+      "B": "Before and after client contact when appropriate",
+      "C": "Only at the end of the day",
+      "D": "Only when gloves tear"
+    },
+    "correct": "B",
+    "explanation": "Clean hands help prevent cross-contamination throughout the workday.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 206,
+    "topic": "sanitation",
+    "prompt": "If a disinfectant container is cloudy and full of hair clippings, you should:",
+    "options": {
+      "A": "Keep using it until closing time",
+      "B": "Add more water",
+      "C": "Change it using proper cleaning and disinfecting procedure",
+      "D": "Use it only on combs"
+    },
+    "correct": "C",
+    "explanation": "Dirty solution is less effective and should be replaced correctly.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 207,
+    "topic": "sanitation",
+    "prompt": "Which statement best describes disinfection?",
+    "options": {
+      "A": "It removes all dirt from a surface",
+      "B": "It destroys many harmful microorganisms on nonporous surfaces",
+      "C": "It guarantees zero risk forever",
+      "D": "It is only used on fabric"
+    },
+    "correct": "B",
+    "explanation": "Disinfection reduces harmful microorganisms on suitable surfaces after cleaning.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 208,
+    "topic": "sanitation",
+    "prompt": "A used towel should be:",
+    "options": {
+      "A": "Folded and reused if it still looks clean",
+      "B": "Stored with clean towels",
+      "C": "Placed in a proper container for soiled linens",
+      "D": "Left on the station to dry"
+    },
+    "correct": "C",
+    "explanation": "Used linens should be separated from clean supplies to reduce contamination.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 209,
+    "topic": "sanitation",
+    "prompt": "What is the safest action if you drop a clean comb on the floor during service?",
+    "options": {
+      "A": "Pick it up and keep working",
+      "B": "Wipe it on a towel and reuse it",
+      "C": "Replace it with a clean comb or re-clean and disinfect it properly",
+      "D": "Ask the client if it is okay to continue using it"
+    },
+    "correct": "C",
+    "explanation": "Once contaminated, the comb should not be reused until properly processed.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 210,
+    "topic": "sanitation",
+    "prompt": "Universal precautions are based on the idea that:",
+    "options": {
+      "A": "Only some clients can carry infection risks",
+      "B": "Every client should be treated as a possible source of infection risk",
+      "C": "Gloves replace all cleaning rules",
+      "D": "Water alone is enough for safety"
+    },
+    "correct": "B",
+    "explanation": "Universal precautions mean using safe practices consistently with all clients.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 211,
+    "topic": "sanitation",
+    "prompt": "Which item is most likely porous?",
+    "options": {
+      "A": "Glass mixing bowl",
+      "B": "Stainless steel shears",
+      "C": "Wooden applicator stick",
+      "D": "Metal clip"
+    },
+    "correct": "C",
+    "explanation": "Wood is porous and is not disinfected the same way as nonporous items.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 212,
+    "topic": "sanitation",
+    "prompt": "When should a workstation be cleaned and disinfected?",
+    "options": {
+      "A": "Once a week",
+      "B": "Only after chemical spills",
+      "C": "Between clients and whenever contamination occurs",
+      "D": "Only before inspection visits"
+    },
+    "correct": "C",
+    "explanation": "Shared work surfaces should be kept sanitary between clients and whenever contamination happens.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 213,
+    "topic": "law-and-safety",
+    "prompt": "A cosmetologist should refuse or postpone a service when the client shows:",
+    "options": {
+      "A": "A hairstyle reference photo",
+      "B": "Signs of a contagious condition in the service area",
+      "C": "Interest in buying retail products",
+      "D": "A request for a shorter appointment"
+    },
+    "correct": "B",
+    "explanation": "Unsafe or contagious conditions are a clear reason to stop and refer out when needed.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 214,
+    "topic": "law-and-safety",
+    "prompt": "Why is license display important in a salon setting?",
+    "options": {
+      "A": "It replaces consultation",
+      "B": "It shows legal authorization to practice when required",
+      "C": "It makes services cheaper",
+      "D": "It guarantees perfect work"
+    },
+    "correct": "B",
+    "explanation": "License display shows that the person is legally authorized to perform services.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 215,
+    "topic": "law-and-safety",
+    "prompt": "What is the safest response if a client asks for a service outside your legal scope?",
+    "options": {
+      "A": "Do it once as a favor",
+      "B": "Try it if another stylist is busy",
+      "C": "Politely refuse and stay within legal scope",
+      "D": "Charge more because it is risky"
+    },
+    "correct": "C",
+    "explanation": "Working outside scope is unsafe and unprofessional. Stay within allowed practice.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 216,
+    "topic": "law-and-safety",
+    "prompt": "If a client reports burning during a chemical service, you should first:",
+    "options": {
+      "A": "Increase the heat",
+      "B": "Ignore it because processing is normal",
+      "C": "Stop and assess the situation safely",
+      "D": "Add more product immediately"
+    },
+    "correct": "C",
+    "explanation": "Burning can signal irritation or chemical injury. Safety comes first.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 217,
+    "topic": "law-and-safety",
+    "prompt": "Which action is most professional during a client consultation?",
+    "options": {
+      "A": "Promise impossible results",
+      "B": "Ignore contraindications",
+      "C": "Explain realistic expectations and safety concerns",
+      "D": "Skip all questions to save time"
+    },
+    "correct": "C",
+    "explanation": "Professional conduct includes honest communication and safe decision-making.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 218,
+    "topic": "law-and-safety",
+    "prompt": "When should a service be modified or delayed?",
+    "options": {
+      "A": "When the client arrives early",
+      "B": "When the hair or skin condition makes the service unsafe",
+      "C": "When the salon music is loud",
+      "D": "When the product bottle is full"
+    },
+    "correct": "B",
+    "explanation": "Contraindications and unsafe conditions should guide whether a service proceeds.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 219,
+    "topic": "law-and-safety",
+    "prompt": "Which choice best shows professional safety judgment?",
+    "options": {
+      "A": "Rushing to finish before reading directions",
+      "B": "Using extra product to impress the client",
+      "C": "Following instructions and stopping when signs of irritation appear",
+      "D": "Guessing on processing time"
+    },
+    "correct": "C",
+    "explanation": "Safe practice means following directions and responding to warning signs.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 220,
+    "topic": "law-and-safety",
+    "prompt": "If a salon tool appears damaged, the best action is to:",
+    "options": {
+      "A": "Use it carefully anyway",
+      "B": "Remove it from service until it is safe",
+      "C": "Use it only on regular clients",
+      "D": "Hide it before inspection"
+    },
+    "correct": "B",
+    "explanation": "Damaged tools create safety risks and should not be used.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 221,
+    "topic": "law-and-safety",
+    "prompt": "Why should a cosmetologist avoid making medical diagnoses?",
+    "options": {
+      "A": "Because it takes too long",
+      "B": "Because diagnosis is outside the normal cosmetology role",
+      "C": "Because clients dislike advice",
+      "D": "Because retail sales matter more"
+    },
+    "correct": "B",
+    "explanation": "Cosmetologists may recognize visible issues and refer out, but they should not diagnose disease.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 222,
+    "topic": "law-and-safety",
+    "prompt": "Which situation most clearly calls for referral rather than service?",
+    "options": {
+      "A": "Client wants a trim",
+      "B": "Client has severe scalp inflammation with broken skin",
+      "C": "Client asks for conditioner",
+      "D": "Client brings a hat"
+    },
+    "correct": "B",
+    "explanation": "Signs of significant irritation or infection should be referred instead of serviced.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 223,
+    "topic": "law-and-safety",
+    "prompt": "The best answer on law-and-safety questions is often the one that is:",
+    "options": {
+      "A": "Fastest and cheapest",
+      "B": "Most dramatic",
+      "C": "Safest, legal, and within scope",
+      "D": "Best for social media"
+    },
+    "correct": "C",
+    "explanation": "Written exam questions often reward the choice that protects the client and follows professional rules.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 224,
+    "topic": "law-and-safety",
+    "prompt": "If a client insists on an unsafe service, the cosmetologist should:",
+    "options": {
+      "A": "Perform it after a verbal warning",
+      "B": "Perform only part of it",
+      "C": "Decline the unsafe service professionally",
+      "D": "Let another student do it"
+    },
+    "correct": "C",
+    "explanation": "Client preference does not override safety or legal practice.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 225,
+    "topic": "hair-fundamentals",
+    "prompt": "Which hair layer provides most of the hair's strength and elasticity?",
+    "options": {
+      "A": "Cuticle",
+      "B": "Cortex",
+      "C": "Medulla",
+      "D": "Arrector pili"
+    },
+    "correct": "B",
+    "explanation": "The cortex is the main structural layer and contains much of the hair's strength and pigment.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 226,
+    "topic": "hair-fundamentals",
+    "prompt": "The outer layer of the hair is the:",
+    "options": {
+      "A": "Cortex",
+      "B": "Matrix",
+      "C": "Cuticle",
+      "D": "Papilla"
+    },
+    "correct": "C",
+    "explanation": "The cuticle is the outer protective layer made of overlapping scales.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 227,
+    "topic": "hair-fundamentals",
+    "prompt": "Which growth phase is the active growing stage of hair?",
+    "options": {
+      "A": "Catagen",
+      "B": "Telogen",
+      "C": "Anagen",
+      "D": "Restagen"
+    },
+    "correct": "C",
+    "explanation": "Anagen is the active growth phase in the hair cycle.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 228,
+    "topic": "hair-fundamentals",
+    "prompt": "Hair porosity refers to the hair's ability to:",
+    "options": {
+      "A": "Change natural texture permanently",
+      "B": "Absorb moisture or chemicals",
+      "C": "Grow faster in heat",
+      "D": "Resist cutting pressure"
+    },
+    "correct": "B",
+    "explanation": "Porosity affects how hair takes in and holds moisture or chemical products.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 229,
+    "topic": "hair-fundamentals",
+    "prompt": "Hair elasticity is the ability of the hair to:",
+    "options": {
+      "A": "Reflect light",
+      "B": "Stretch and return without breaking",
+      "C": "Change color easily",
+      "D": "Dry quickly"
+    },
+    "correct": "B",
+    "explanation": "Elasticity helps show the hair's condition and how well it may handle services.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 230,
+    "topic": "hair-fundamentals",
+    "prompt": "A scalp analysis is done mainly to:",
+    "options": {
+      "A": "Choose the salon playlist",
+      "B": "Identify hair and scalp condition before service",
+      "C": "Replace patch testing",
+      "D": "Predict haircut trends"
+    },
+    "correct": "B",
+    "explanation": "Scalp and hair analysis helps guide safe product and service choices.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 231,
+    "topic": "hair-fundamentals",
+    "prompt": "Which pH level is considered neutral?",
+    "options": {
+      "A": "2",
+      "B": "5",
+      "C": "7",
+      "D": "10"
+    },
+    "correct": "C",
+    "explanation": "A pH of 7 is neutral. Lower values are acidic and higher values are alkaline.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 232,
+    "topic": "hair-fundamentals",
+    "prompt": "The hair root is located:",
+    "options": {
+      "A": "Above the skin only",
+      "B": "In the follicle below the scalp surface",
+      "C": "In the cuticle",
+      "D": "At the free edge"
+    },
+    "correct": "B",
+    "explanation": "The root is the part of the hair below the scalp, inside the follicle.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 233,
+    "topic": "hair-fundamentals",
+    "prompt": "If hair feels overly dry, weak, and rough, a safe exam clue is that it may have:",
+    "options": {
+      "A": "Good elasticity and low porosity",
+      "B": "Signs of damage and reduced resilience",
+      "C": "No need for conditioning",
+      "D": "Better chemical resistance"
+    },
+    "correct": "B",
+    "explanation": "Dry, rough, weak-feeling hair often suggests damage and the need for extra caution.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 234,
+    "topic": "hair-fundamentals",
+    "prompt": "The best reason to understand hair structure before chemical services is to:",
+    "options": {
+      "A": "Make consultation less important",
+      "B": "Apply stronger products automatically",
+      "C": "Predict how the hair may respond and avoid damage",
+      "D": "Eliminate the need for strand tests"
+    },
+    "correct": "C",
+    "explanation": "Knowing hair structure supports safer product choice, timing, and expectations.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 235,
+    "topic": "shampoo-and-draping",
+    "prompt": "Proper draping is important because it helps protect the client's:",
+    "options": {
+      "A": "Appointment time only",
+      "B": "Clothing and skin during service",
+      "C": "Hairline shape only",
+      "D": "Retail purchases"
+    },
+    "correct": "B",
+    "explanation": "Draping helps maintain cleanliness and protects the client during service.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 236,
+    "topic": "shampoo-and-draping",
+    "prompt": "Water temperature during shampooing should generally be:",
+    "options": {
+      "A": "Extremely hot",
+      "B": "Comfortable for the client",
+      "C": "Ice cold only",
+      "D": "Irrelevant if shampoo is expensive"
+    },
+    "correct": "B",
+    "explanation": "Client comfort and scalp safety matter during shampoo services.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 237,
+    "topic": "shampoo-and-draping",
+    "prompt": "If shampoo gets into a client's eyes, the first response should be to:",
+    "options": {
+      "A": "Continue the service quickly",
+      "B": "Rinse the eyes immediately and respond safely",
+      "C": "Add conditioner right away",
+      "D": "Dry the hair first"
+    },
+    "correct": "B",
+    "explanation": "Immediate rinsing helps reduce irritation and protect the client.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 238,
+    "topic": "haircutting",
+    "prompt": "A stationary guide is best described as a guide that:",
+    "options": {
+      "A": "Moves with every subsection",
+      "B": "Stays in one place while length is built from it",
+      "C": "Is only used for curling",
+      "D": "Creates chemical texture"
+    },
+    "correct": "B",
+    "explanation": "A stationary guide stays in one place and helps build length from that point.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 239,
+    "topic": "haircutting",
+    "prompt": "A traveling guide:",
+    "options": {
+      "A": "Remains fixed in one location",
+      "B": "Moves along as each new section becomes the guide",
+      "C": "Is only for bangs",
+      "D": "Is used only with razors"
+    },
+    "correct": "B",
+    "explanation": "With a traveling guide, part of the previously cut section guides the next section.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 240,
+    "topic": "haircutting",
+    "prompt": "A 0-degree elevation usually creates:",
+    "options": {
+      "A": "Uniform layers",
+      "B": "Strong weight at the perimeter",
+      "C": "Maximum graduation",
+      "D": "Curl reformation"
+    },
+    "correct": "B",
+    "explanation": "Low elevation builds weight and creates a one-length effect.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 241,
+    "topic": "haircutting",
+    "prompt": "A 90-degree haircut generally creates:",
+    "options": {
+      "A": "Blunt weight line only",
+      "B": "Uniform layers",
+      "C": "A chemical wave pattern",
+      "D": "No movement at all"
+    },
+    "correct": "B",
+    "explanation": "Ninety-degree elevation is commonly associated with uniform layering.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 242,
+    "topic": "styling",
+    "prompt": "Before using a thermal iron, you should first consider the hair's:",
+    "options": {
+      "A": "Favorite product scent",
+      "B": "Condition and ability to handle heat",
+      "C": "Natural growth cycle only",
+      "D": "License display"
+    },
+    "correct": "B",
+    "explanation": "Heat should match the hair type and condition to avoid damage.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 243,
+    "topic": "styling",
+    "prompt": "What is the safest action if steam or smoke appears during thermal styling?",
+    "options": {
+      "A": "Continue because that means the style is holding",
+      "B": "Increase temperature for faster results",
+      "C": "Stop and reduce heat or reassess the hair condition",
+      "D": "Add relaxer"
+    },
+    "correct": "C",
+    "explanation": "Visible overheating is a warning sign that the hair may be getting damaged.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 244,
+    "topic": "chemical-services",
+    "prompt": "A patch test is used mainly to help check for:",
+    "options": {
+      "A": "Haircut balance",
+      "B": "Possible sensitivity to a product",
+      "C": "Nail growth rate",
+      "D": "Proper draping angle"
+    },
+    "correct": "B",
+    "explanation": "Patch testing is used before certain services to help detect possible sensitivity reactions.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 245,
+    "topic": "chemical-services",
+    "prompt": "A strand test helps the cosmetologist determine:",
+    "options": {
+      "A": "Retail pricing",
+      "B": "How the hair may react to the chemical service",
+      "C": "Whether gloves are optional",
+      "D": "The client's license status"
+    },
+    "correct": "B",
+    "explanation": "Strand tests help predict processing, tone, and condition response.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 246,
+    "topic": "chemical-services",
+    "prompt": "Why is overlapping relaxer onto previously relaxed hair dangerous?",
+    "options": {
+      "A": "It improves smoothness too evenly",
+      "B": "It can cause overprocessing and breakage",
+      "C": "It makes hair too shiny",
+      "D": "It lowers porosity permanently"
+    },
+    "correct": "B",
+    "explanation": "Previously relaxed hair is already processed and is more vulnerable to damage.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 247,
+    "topic": "chemical-services",
+    "prompt": "The main job of developer in oxidative haircolor is to:",
+    "options": {
+      "A": "Condition the scalp only",
+      "B": "Lift and develop color when used with the color formula",
+      "C": "Neutralize all warmth by itself",
+      "D": "Replace the need for patch testing"
+    },
+    "correct": "B",
+    "explanation": "Developer helps open the cuticle and support oxidation in many color formulas.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 248,
+    "topic": "chemical-services",
+    "prompt": "Which color neutralizes yellow tones?",
+    "options": {
+      "A": "Green",
+      "B": "Violet",
+      "C": "Orange",
+      "D": "Red"
+    },
+    "correct": "B",
+    "explanation": "Violet is opposite yellow on the color wheel.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 249,
+    "topic": "chemical-services",
+    "prompt": "Which color neutralizes orange tones?",
+    "options": {
+      "A": "Blue",
+      "B": "Violet",
+      "C": "Red",
+      "D": "Green"
+    },
+    "correct": "A",
+    "explanation": "Blue is opposite orange on the color wheel and is used to counter orange tones.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 250,
+    "topic": "chemical-services",
+    "prompt": "Lightener should be monitored carefully because it can:",
+    "options": {
+      "A": "Permanently sanitize hair",
+      "B": "Overprocess and weaken the hair",
+      "C": "Replace shampooing",
+      "D": "Remove the need for toner"
+    },
+    "correct": "B",
+    "explanation": "Lightening can significantly affect hair structure and must be handled with care.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 251,
+    "topic": "chemical-services",
+    "prompt": "If the scalp shows strong irritation during a chemical service, the best response is to:",
+    "options": {
+      "A": "Keep processing for better results",
+      "B": "Add heat immediately",
+      "C": "Stop and follow safe removal procedure",
+      "D": "Cover the area with more product"
+    },
+    "correct": "C",
+    "explanation": "Irritation is a warning sign. Safety overrides finishing the service.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 252,
+    "topic": "chemical-services",
+    "prompt": "Permanent haircolor generally penetrates the hair more than temporary color because it:",
+    "options": {
+      "A": "Sits only on the outside of the hair",
+      "B": "Uses oxidative chemistry to create a more lasting change",
+      "C": "Contains no chemistry at all",
+      "D": "Works only on wet hair"
+    },
+    "correct": "B",
+    "explanation": "Permanent color involves oxidation and usually gives a longer-lasting result.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 253,
+    "topic": "chemical-services",
+    "prompt": "Which service changes the natural curl pattern by rearranging bonds in the hair?",
+    "options": {
+      "A": "Shampooing",
+      "B": "Permanent waving",
+      "C": "Draping",
+      "D": "Finger waving only"
+    },
+    "correct": "B",
+    "explanation": "Permanent waving changes the hair's curl pattern through chemical action and reforming.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 254,
+    "topic": "chemical-services",
+    "prompt": "What is the main purpose of neutralizer in many waving services?",
+    "options": {
+      "A": "To remove all shampoo residue only",
+      "B": "To harden the cape",
+      "C": "To help rebuild and lock the hair into its new shape",
+      "D": "To bleach the hair slightly"
+    },
+    "correct": "C",
+    "explanation": "Neutralizer helps reform bonds and stabilize the new curl pattern.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 255,
+    "topic": "chemical-services",
+    "prompt": "Why is it risky to perform a strong chemical service on hair with poor elasticity?",
+    "options": {
+      "A": "Because the hair is likely more vulnerable to damage",
+      "B": "Because poor elasticity means faster growth",
+      "C": "Because it guarantees perfect lift",
+      "D": "Because elasticity matters only in nail care"
+    },
+    "correct": "A",
+    "explanation": "Poor elasticity can signal weakened hair that may not tolerate additional processing well.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 256,
+    "topic": "chemical-services",
+    "prompt": "The safest reason to read manufacturer directions before a chemical service is to:",
+    "options": {
+      "A": "Make your own timing chart unnecessary",
+      "B": "Follow proper mixing, timing, and safety guidance",
+      "C": "Avoid consultation completely",
+      "D": "Skip strand testing"
+    },
+    "correct": "B",
+    "explanation": "Directions help guide the safe use of the specific product.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 257,
+    "topic": "chemical-services",
+    "prompt": "If a chemical product is not labeled for a certain use, the best action is to:",
+    "options": {
+      "A": "Use it anyway in a smaller amount",
+      "B": "Mix it with shampoo",
+      "C": "Do not use it for that unapproved purpose",
+      "D": "Ask the client to decide"
+    },
+    "correct": "C",
+    "explanation": "Products should be used only as directed for safety and professional practice.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 258,
+    "topic": "chemical-services",
+    "prompt": "Which statement about relaxers is most accurate?",
+    "options": {
+      "A": "They are harmless on irritated scalp",
+      "B": "They chemically reduce curl and require careful timing and scalp safety",
+      "C": "They are temporary like hairspray",
+      "D": "They work best when overlapped often"
+    },
+    "correct": "B",
+    "explanation": "Relaxers are strong chemical services that require caution and correct application.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 259,
+    "topic": "chemical-services",
+    "prompt": "What is the best reason to avoid brushing the scalp before a relaxer service?",
+    "options": {
+      "A": "It lowers the hairline",
+      "B": "It may increase scalp irritation risk",
+      "C": "It prevents sectioning",
+      "D": "It cools the hair too much"
+    },
+    "correct": "B",
+    "explanation": "Scalp abrasion or irritation before a relaxer increases the risk of discomfort and injury.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 260,
+    "topic": "chemical-services",
+    "prompt": "If a client wants major lightening on previously damaged hair, the safest answer is to:",
+    "options": {
+      "A": "Promise full results in one session no matter what",
+      "B": "Ignore the condition and proceed quickly",
+      "C": "Reassess, explain the risk, and choose the safer plan",
+      "D": "Use the strongest formula available immediately"
+    },
+    "correct": "C",
+    "explanation": "Safety and hair integrity come before aggressive processing goals.",
+    "difficulty": "Hard"
+  }
+]
