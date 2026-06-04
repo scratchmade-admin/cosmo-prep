@@ -1972,5 +1972,635 @@
     "correct": "B",
     "explanation": "California cosmetology licenses are renewed on a two-year cycle. Failure to renew results in an expired license.",
     "difficulty": "Medium"
+  },
+  {
+    "id": 342,
+    "topic": "sanitation",
+    "prompt": "A cosmetologist finishes a nail service and notices a small amount of blood on a reusable metal implement. The correct sequence of actions is:",
+    "options": {
+      "A": "Rinse with water, disinfect for the required contact time, store dry",
+      "B": "Wipe with a dry towel, spray with disinfectant, return to drawer",
+      "C": "Clean to remove all visible debris, then fully immerse in EPA-registered disinfectant for the required time",
+      "D": "Soak in water for 10 minutes, then wipe dry"
+    },
+    "correct": "C",
+    "explanation": "Blood on an implement requires cleaning first (removing visible material so disinfectant can work), then full disinfection with an EPA-registered product at the correct concentration and contact time. Wiping or rinsing alone is not sufficient.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 343,
+    "topic": "sanitation",
+    "prompt": "Two disinfectants are available: one is EPA-registered for use on implements and one is a hospital-grade product not approved for salon tools. Which should be used on metal implements?",
+    "options": {
+      "A": "The hospital-grade product, because higher grade means safer",
+      "B": "The EPA-registered salon disinfectant, because it is approved for that specific use",
+      "C": "Either product, since both are disinfectants",
+      "D": "Neither — metal implements only need soap and water"
+    },
+    "correct": "B",
+    "explanation": "EPA registration for the specific use (salon implements) is what matters, not overall \"grade.\" A product approved for hospitals may not be tested or labeled for salon implement disinfection.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 344,
+    "topic": "sanitation",
+    "prompt": "A client returns for a service and mentions she had a minor staph infection on her hand last week. She says it has healed and the skin looks normal now. The safest response is:",
+    "options": {
+      "A": "Proceed normally since the skin looks healed",
+      "B": "Ask when she was cleared by a physician and inspect the area carefully before proceeding",
+      "C": "Refuse all services permanently",
+      "D": "Wear double gloves and proceed immediately"
+    },
+    "correct": "B",
+    "explanation": "A recent infection, even one that looks healed externally, requires professional clearance before service. The cosmetologist cannot diagnose whether the infection is fully resolved.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 345,
+    "topic": "sanitation",
+    "prompt": "Which situation best demonstrates understanding of the difference between sanitation and disinfection?",
+    "options": {
+      "A": "Using a disinfectant spray on a surface that still has hair and product on it",
+      "B": "Wiping a surface clean first, then applying disinfectant for the full contact time",
+      "C": "Applying hand sanitizer before picking up a soiled implement",
+      "D": "Rinsing scissors under hot water after each client"
+    },
+    "correct": "B",
+    "explanation": "Sanitation (cleaning) must happen before disinfection can be effective. Disinfectants cannot penetrate visible debris, so applying disinfectant to a dirty surface skips a critical step.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 346,
+    "topic": "sanitation",
+    "prompt": "A salon uses quaternary ammonium disinfectant at the manufacturer-specified concentration. After immersing implements, a cosmetologist removes them after 2 minutes instead of the required 10. This is a problem because:",
+    "options": {
+      "A": "The implements may corrode from over-immersion later",
+      "B": "The required contact time was not met, so adequate disinfection may not have occurred",
+      "C": "Quat disinfectants only need 1 minute, so 2 minutes is actually fine",
+      "D": "Contact time only matters for porous implements"
+    },
+    "correct": "B",
+    "explanation": "Contact time is the minimum time needed for the disinfectant to kill the target pathogens. Removing implements early means the disinfection process is incomplete, regardless of concentration.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 347,
+    "topic": "law-and-safety",
+    "prompt": "A client requests a chemical relaxer but has a visible scalp abrasion from scratching. She insists she is fine and wants to proceed. The correct response is:",
+    "options": {
+      "A": "Apply the relaxer but avoid the abraded area",
+      "B": "Decline the service until the scalp is fully healed, explaining the chemical safety risk",
+      "C": "Proceed since the client gave verbal consent",
+      "D": "Apply a petroleum-based product over the abrasion and continue"
+    },
+    "correct": "B",
+    "explanation": "Client consent does not override safety standards. A relaxer applied near an open abrasion can cause a chemical burn. The professional responsibility is to decline the service, not find a workaround.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 348,
+    "topic": "law-and-safety",
+    "prompt": "A salon owner asks a licensed cosmetologist to perform a service that falls outside the California cosmetology scope of practice. The cosmetologist should:",
+    "options": {
+      "A": "Perform the service since the employer requested it",
+      "B": "Perform the service only if the client signs a waiver",
+      "C": "Decline, because performing services outside scope of practice violates the license regardless of who asks",
+      "D": "Ask another unlicensed staff member to perform it instead"
+    },
+    "correct": "C",
+    "explanation": "Scope of practice is defined by the license, not by employer direction or client consent. A cosmetologist who performs out-of-scope services is liable regardless of who requested it.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 349,
+    "topic": "law-and-safety",
+    "prompt": "A client presents with what appears to be ringworm on the scalp. She says she has been treating it at home and feels it is getting better. The cosmetologist should:",
+    "options": {
+      "A": "Proceed with a gentle shampoo and avoid the affected area",
+      "B": "Perform only the services that do not contact the scalp",
+      "C": "Decline all services and refer the client to a physician before rescheduling",
+      "D": "Ask the client to sign a liability waiver and proceed"
+    },
+    "correct": "C",
+    "explanation": "Ringworm (tinea capitis) is a contagious fungal infection. No scalp service should be performed. The correct response is to decline and refer — waivers do not protect the cosmetologist from licensing violations.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 350,
+    "topic": "law-and-safety",
+    "prompt": "A cosmetologist notices a colleague reusing a single-use item on a second client without disinfecting it. The most professionally appropriate action is to:",
+    "options": {
+      "A": "Ignore it — it is not their station",
+      "B": "Confront the colleague loudly in front of clients",
+      "C": "Report the concern to the salon manager or owner through proper channels",
+      "D": "Inform the client directly that they are at risk"
+    },
+    "correct": "C",
+    "explanation": "Licensing standards apply to the salon as a whole. The correct professional response is to report the concern through proper channels (manager/owner), not to ignore it or escalate publicly.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 351,
+    "topic": "law-and-safety",
+    "prompt": "A new cosmetologist has a license but it has not yet arrived in the mail. A client walks in and asks for a service. The cosmetologist should:",
+    "options": {
+      "A": "Perform the service since they passed the exam",
+      "B": "Perform the service and show their exam results as proof",
+      "C": "Wait until the physical license is received and displayed before performing services",
+      "D": "Ask the salon owner to perform the service under their license"
+    },
+    "correct": "C",
+    "explanation": "In California, a cosmetologist must have a valid, displayed license before performing services. Passing the exam is not sufficient — the license must be issued and on display.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 352,
+    "topic": "chemical-services",
+    "prompt": "A client with highlighted hair wants a perm. A strand test shows the hair stretches excessively and does not spring back. The most appropriate response is:",
+    "options": {
+      "A": "Proceed with a mild perm formula and shorter processing time",
+      "B": "Refuse the service and explain the hair is too compromised for safe perming",
+      "C": "Double the neutralizing time to compensate for weak bonds",
+      "D": "Apply a protein treatment immediately before the perm"
+    },
+    "correct": "B",
+    "explanation": "Hair that stretches excessively without returning to its original length has poor elasticity, indicating severe damage. Perming this hair risks breakage. The safe choice is to decline and recommend a conditioning treatment plan first.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 353,
+    "topic": "chemical-services",
+    "prompt": "During a relaxer service the client reports a tingling sensation that is increasing. The cosmetologist has been processing for only 5 of the recommended 15 minutes. The correct action is:",
+    "options": {
+      "A": "Reassure the client that tingling is normal and continue processing",
+      "B": "Stop processing, rinse the relaxer out immediately, and assess the scalp",
+      "C": "Apply more base cream to the tingling area and continue",
+      "D": "Process for 5 more minutes then evaluate"
+    },
+    "correct": "B",
+    "explanation": "Increasing tingling during a relaxer signals the chemical is causing irritation or burning. Processing time is irrelevant when there is a safety concern — rinse immediately and assess.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 354,
+    "topic": "chemical-services",
+    "prompt": "A client wants to go from a level 4 dark brown to a level 10 platinum blonde in one salon visit. The cosmetologist should:",
+    "options": {
+      "A": "Agree — high-volume developer can achieve this in one session",
+      "B": "Explain that achieving 6+ levels of lift in one session is likely to cause severe damage and discuss a multi-session plan",
+      "C": "Perform the service if the client signs a release form",
+      "D": "Use a high-lift color with 40 volume developer on the entire head"
+    },
+    "correct": "B",
+    "explanation": "Lifting more than 3–4 levels at once, especially from dark brown to platinum, risks severe breakage. A professional consultation explaining the multi-session process is the correct response — a waiver does not make an unsafe service safe.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 355,
+    "topic": "chemical-services",
+    "prompt": "A client had a relaxer 6 weeks ago and wants another full-application relaxer today. The cosmetologist should:",
+    "options": {
+      "A": "Apply the relaxer to the full hair length since 6 weeks is sufficient time",
+      "B": "Apply relaxer only to the new growth at the scalp, avoiding previously relaxed hair",
+      "C": "Double-process the ends with a milder formula to refresh them",
+      "D": "Perform a strand test on the ends only and proceed if they pass"
+    },
+    "correct": "B",
+    "explanation": "Overlapping a relaxer onto previously processed hair causes overprocessing and breakage. Only new growth (the unprocessed hair at the scalp) should receive the relaxer.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 356,
+    "topic": "chemical-services",
+    "prompt": "After neutralizing a perm, the cosmetologist notices the curl pattern is looser than the client wanted. The most likely cause is:",
+    "options": {
+      "A": "The neutralizer was left on too long",
+      "B": "The rods used were too large, or the waving lotion was under-processed",
+      "C": "The client's hair was too porous before the service",
+      "D": "The hair was rinsed too quickly after waving lotion application"
+    },
+    "correct": "B",
+    "explanation": "A looser-than-desired curl result typically indicates under-processing (insufficient waving lotion penetration or processing time) or rod size that was too large. Over-processing usually causes over-curly or damaged results, not loose ones.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 357,
+    "topic": "hair-fundamentals",
+    "prompt": "A client's hair absorbs color very quickly at the ends but resists color at the roots. This most likely indicates:",
+    "options": {
+      "A": "Low porosity throughout, requiring a longer processing time",
+      "B": "High porosity at the ends and lower porosity at the roots — common in hair with more mechanical damage at the ends",
+      "C": "The color formula is too weak for the roots",
+      "D": "The hair is too short for consistent processing"
+    },
+    "correct": "B",
+    "explanation": "Uneven porosity along the hair shaft is common. Ends are typically more porous from heat, mechanical damage, and previous chemical services. Roots have new growth with an intact cuticle and resist color absorption.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 358,
+    "topic": "hair-fundamentals",
+    "prompt": "A client has alopecia areata — smooth, round patches of hair loss on the scalp. Before any service, the cosmetologist should:",
+    "options": {
+      "A": "Apply a thickening shampoo to stimulate the follicles",
+      "B": "Avoid the patches and proceed with the requested service normally",
+      "C": "Consult with the client about the condition, avoid the affected areas, and refer to a dermatologist if the client has not already seen one",
+      "D": "Decline all services since alopecia is contagious"
+    },
+    "correct": "C",
+    "explanation": "Alopecia areata is an autoimmune condition, not contagious. Services can often proceed with care, but the client should be under dermatological care, and the cosmetologist should avoid triggering trauma to affected areas.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 359,
+    "topic": "hair-fundamentals",
+    "prompt": "Disulfide bonds in the hair are significant in chemical services because they:",
+    "options": {
+      "A": "Determine the hair's color and are broken by lighteners",
+      "B": "Provide the hair's primary strength and are broken by perms and relaxers to change shape",
+      "C": "Are temporary bonds easily changed by water and heat styling",
+      "D": "Are found only in the medulla and do not affect chemical services"
+    },
+    "correct": "B",
+    "explanation": "Disulfide bonds are strong covalent bonds in the cortex that give hair its structural integrity. Perms use a reducing agent to break them so hair can be reshaped, then an oxidizing neutralizer to reform them in the new shape.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 360,
+    "topic": "hair-fundamentals",
+    "prompt": "A client wants a perm but has been using a silicone-heavy smoothing product daily for months. Before perming, the cosmetologist should:",
+    "options": {
+      "A": "Proceed — silicone does not affect perm processing",
+      "B": "Use a clarifying or chelating shampoo to remove silicone buildup before applying waving lotion",
+      "C": "Double the processing time to penetrate the silicone barrier",
+      "D": "Apply the waving lotion without shampooing first"
+    },
+    "correct": "B",
+    "explanation": "Silicone buildup on the cuticle creates a barrier that prevents waving lotion from penetrating the cortex evenly. A clarifying or chelating shampoo is needed to remove the buildup before the chemical service.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 361,
+    "topic": "hair-fundamentals",
+    "prompt": "A client reports her hair breaks when she stretches it even slightly when wet. This suggests:",
+    "options": {
+      "A": "Normal hair behavior — all hair is fragile when wet",
+      "B": "Low elasticity, likely from chemical overprocessing or protein loss",
+      "C": "High porosity causing the hair to absorb too much water",
+      "D": "The hair has too much natural curl and needs relaxing"
+    },
+    "correct": "B",
+    "explanation": "Healthy hair should stretch up to ~50% of its length when wet before breaking. Breakage from minimal stretch indicates severely compromised elasticity, usually from damage to the cortex proteins.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 362,
+    "topic": "haircutting",
+    "prompt": "A client has a triangular face shape with a narrow forehead and wide jaw. The most flattering haircut approach would be:",
+    "options": {
+      "A": "A blunt one-length bob at the jaw to emphasize the jaw width",
+      "B": "Adding volume at the crown and temples while keeping the length sleek around the jaw",
+      "C": "A very close-cut style to minimize all features equally",
+      "D": "Heavy layers starting at the chin to frame the jaw"
+    },
+    "correct": "B",
+    "explanation": "For a triangular face, the goal is to balance proportions — adding width at the forehead and crown while minimizing visual width at the jaw creates a more balanced appearance.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 363,
+    "topic": "haircutting",
+    "prompt": "A client wants a haircut that removes weight from the interior of the hair but maintains the same perimeter length. The technique that best achieves this is:",
+    "options": {
+      "A": "Blunt cutting at zero elevation",
+      "B": "Slithering or point cutting into the interior sections",
+      "C": "Overdirecting all sections forward",
+      "D": "Cutting at 90 degrees throughout"
+    },
+    "correct": "B",
+    "explanation": "Slithering (sliding the shears along the hair shaft) or point cutting removes interior bulk and weight without significantly shortening the perimeter — exactly what this client wants.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 364,
+    "topic": "haircutting",
+    "prompt": "When using a traveling guide in a layered haircut, each new section is cut to match the:",
+    "options": {
+      "A": "Original stationary guide established at the nape",
+      "B": "Previously cut section, which moves with the haircut as the guide travels",
+      "C": "Longest section of hair on the entire head",
+      "D": "Shortest section regardless of position"
+    },
+    "correct": "B",
+    "explanation": "In a traveling guide technique, the previously cut section becomes the guide for the next one. This allows length and layers to build progressively across the head.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 365,
+    "topic": "haircutting",
+    "prompt": "A client's haircut looks uneven after blow-drying even though it looked balanced when wet. The most likely cause is:",
+    "options": {
+      "A": "The scissors were dull",
+      "B": "The hair was over-sectioned during the cut",
+      "C": "Inconsistent tension or uneven shrinkage due to different wave patterns or porosity across the head",
+      "D": "The client moved during the service"
+    },
+    "correct": "C",
+    "explanation": "Hair shrinks at different rates when drying based on texture, porosity, and natural wave pattern. Inconsistent tension during wet cutting also causes uneven results when dry. This is why dry cutting or accounting for shrinkage is important.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 366,
+    "topic": "haircutting",
+    "prompt": "A graduated bob is cut with elevation angles between 0 and 45 degrees. Increasing the elevation angle in a graduated cut would:",
+    "options": {
+      "A": "Increase the weight at the perimeter and flatten the silhouette",
+      "B": "Reduce the weight at the perimeter and create more graduation and layering",
+      "C": "Have no effect on weight distribution",
+      "D": "Extend the perimeter length"
+    },
+    "correct": "B",
+    "explanation": "As elevation increases in a graduated cut, more length is removed from the interior relative to the perimeter, reducing the weight line and increasing the layered effect. Higher elevation = less weight, more graduation.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 367,
+    "topic": "styling",
+    "prompt": "A client with a fine, limp hair type wants more volume after a blow-dry. Which technique best achieves this without causing heat damage?",
+    "options": {
+      "A": "Dry the hair completely on high heat, then re-wet and dry again",
+      "B": "Use a medium heat setting, lift sections with a round brush from roots to ends, and finish with cool air to set the style",
+      "C": "Apply maximum heat directly at the roots for maximum lift",
+      "D": "Blow-dry without any attachment in a downward direction"
+    },
+    "correct": "B",
+    "explanation": "For fine hair, moderate heat with a round brush creates root lift without over-stressing the hair. Cool air sets the style by closing the cuticle. High heat on fine hair causes damage and reduces volume over time.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 368,
+    "topic": "styling",
+    "prompt": "During thermal pressing of very curly hair, the client experiences slight smoke rising from the pressing comb. The cosmetologist should:",
+    "options": {
+      "A": "Continue pressing quickly to minimize exposure time",
+      "B": "Stop pressing immediately, remove the comb from the hair, and lower the temperature before continuing",
+      "C": "Add more pressing oil to reduce smoking",
+      "D": "Increase ventilation and continue at the same temperature"
+    },
+    "correct": "B",
+    "explanation": "Smoke during pressing indicates the temperature is too high and is scorching the hair or pressing oil. Continuing causes irreversible heat damage. Lower the temperature before proceeding.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 369,
+    "topic": "styling",
+    "prompt": "A client wants a finger wave but her hair is very short at the nape and difficult to mold. The most effective approach is to:",
+    "options": {
+      "A": "Use a stronger-hold gel and larger ridges to compensate for length",
+      "B": "Work section by section from the front hairline back, completing each wave before moving to the next",
+      "C": "Wet the hair thoroughly and use maximum tension to hold the waves",
+      "D": "Skip the nape area and focus waves only on the top"
+    },
+    "correct": "B",
+    "explanation": "Finger waving works best when done systematically from the front back, completing each ridge fully before moving on. This ensures wave continuity and avoids disturbing previously set sections.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 370,
+    "topic": "styling",
+    "prompt": "A client has a natural wave pattern that tends to frizz when air-dried. She wants a smooth blow-dry result. Which approach best addresses this?",
+    "options": {
+      "A": "Rough-dry completely without product, then straighten with a flat iron",
+      "B": "Apply a smoothing serum to damp hair, then blow-dry in sections directing airflow down the cuticle with a round brush and concentrator nozzle",
+      "C": "Blow-dry on the highest heat setting as fast as possible to lock out humidity",
+      "D": "Let the hair air-dry 80% then finish with a diffuser"
+    },
+    "correct": "B",
+    "explanation": "A smoothing serum controls frizz by coating the cuticle; directing airflow down the cuticle seals it further. A concentrator nozzle focuses airflow for precision. Speed and high heat alone create frizz rather than reducing it.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 371,
+    "topic": "styling",
+    "prompt": "When setting hair in pin curls for a wave pattern, what determines whether the curls will produce waves or defined ringlets?",
+    "options": {
+      "A": "The size of the base section only",
+      "B": "Both the direction of the curl and whether they are set in alternating rows (waves) or all the same direction (ringlets)",
+      "C": "The type of setting lotion used",
+      "D": "The temperature of the dryer used to set them"
+    },
+    "correct": "B",
+    "explanation": "Alternating the direction of pin curls in adjacent rows creates an S-wave pattern when combed out. Setting all curls in the same direction throughout produces defined ringlets or curls rather than waves.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 372,
+    "topic": "shampoo-and-draping",
+    "prompt": "A client with a very oily scalp but extremely dry, color-treated ends comes in for a shampoo service. The best product approach is:",
+    "options": {
+      "A": "Use a moisturizing shampoo throughout to protect the color-treated ends",
+      "B": "Use a balancing shampoo focused on the scalp, and apply a hydrating conditioner to the mid-lengths and ends only",
+      "C": "Use a clarifying shampoo throughout to remove all buildup",
+      "D": "Skip shampoo and use a dry shampoo only"
+    },
+    "correct": "B",
+    "explanation": "Scalp and ends often have different needs. A balancing shampoo at the scalp addresses oiliness; conditioner on the dry ends restores moisture without adding more product to the already-oily scalp.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 373,
+    "topic": "shampoo-and-draping",
+    "prompt": "A client being prepped for a relaxer service has her hair draped with the cape directly on her skin and the towel on top. This is incorrect because:",
+    "options": {
+      "A": "The towel should be over the cape so that chemicals do not contact the skin at the neckline",
+      "B": "Both the cape and towel should be removed during chemical services",
+      "C": "The towel should not be used at all during relaxer services",
+      "D": "The order does not matter as long as both are used"
+    },
+    "correct": "A",
+    "explanation": "For chemical services, the towel goes on the skin first to protect against chemical contact, and the cape goes over the towel. The reversed order leaves skin exposed at the neckline if chemicals drip.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 374,
+    "topic": "shampoo-and-draping",
+    "prompt": "A client winces when the cosmetologist begins the scalp massage portion of the shampoo service. The correct response is:",
+    "options": {
+      "A": "Use lighter pressure and continue the full massage",
+      "B": "Ask the client what they are feeling, check the scalp for any issues, and adjust or stop the massage based on what you find",
+      "C": "Skip the massage and move directly to rinsing",
+      "D": "Increase the water temperature which may be causing discomfort"
+    },
+    "correct": "B",
+    "explanation": "Wincing during a scalp massage could indicate sensitivity, inflammation, soreness, or an underlying scalp condition. The professional response is to ask, assess, and then decide — not to automatically continue or automatically stop.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 375,
+    "topic": "shampoo-and-draping",
+    "prompt": "Which shampoo type would be most damaging to use on a client who receives a keratin smoothing treatment every 3 months?",
+    "options": {
+      "A": "Moisturizing shampoo",
+      "B": "Sulfate-free color-safe shampoo",
+      "C": "Clarifying shampoo used regularly",
+      "D": "Balancing shampoo used at the scalp only"
+    },
+    "correct": "C",
+    "explanation": "Clarifying shampoos strip the hair aggressively. Regular use on keratin-treated hair removes the treatment faster than normal, shortening its effectiveness. Sulfate-free products are the standard recommendation for keratin treatments.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 376,
+    "topic": "shampoo-and-draping",
+    "prompt": "A client with a seborrheic dermatitis flare-up (red, flaky, inflamed scalp) comes in for a shampoo. The safest approach is:",
+    "options": {
+      "A": "Use a medicated anti-dandruff shampoo and proceed normally",
+      "B": "Perform a gentle shampoo avoiding the most inflamed areas and suggest the client consult a dermatologist",
+      "C": "Refuse all services until the condition resolves completely",
+      "D": "Apply a deep conditioning mask to the scalp to soothe the inflammation"
+    },
+    "correct": "B",
+    "explanation": "Seborrheic dermatitis during a flare is a skin condition but not a hard contraindication for all services. A gentle shampoo with care around inflamed areas is appropriate, while a referral to a dermatologist for ongoing management is the professional recommendation.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 377,
+    "topic": "skin-and-nails",
+    "prompt": "A client presents with nails that are yellowed, thickened, crumbling at the free edge, and separated from the nail bed at the tip. This presentation most strongly suggests:",
+    "options": {
+      "A": "Dry cuticles from insufficient hydration",
+      "B": "Onychomycosis (nail fungus) — a contraindication requiring physician referral before service",
+      "C": "Normal nail aging that can be treated with buffing",
+      "D": "Damage from acrylic nail removal that will resolve on its own"
+    },
+    "correct": "B",
+    "explanation": "Yellow, thickened, crumbling nails with nail separation (onycholysis) are classic signs of onychomycosis. This is a fungal infection and a hard contraindication. Buffing or treating it in the salon can spread infection and cause harm.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 378,
+    "topic": "skin-and-nails",
+    "prompt": "During a facial, the cosmetologist notices a mole on the client's face that appears asymmetrical, has uneven borders, and has multiple colors. The correct action is:",
+    "options": {
+      "A": "Proceed with the facial and avoid the mole area",
+      "B": "Note the observation, recommend the client see a dermatologist, document it in the client record, and proceed if the client wishes",
+      "C": "Tell the client it is melanoma and they need to see a doctor immediately",
+      "D": "Take a photo and send it to a dermatology resource for identification"
+    },
+    "correct": "B",
+    "explanation": "A cosmetologist can note and flag concerning skin features but cannot diagnose. The professional response is to recommend a dermatologist visit clearly, document the observation, and let the client decide about the service. Diagnosing aloud (even casually) is outside scope.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 379,
+    "topic": "skin-and-nails",
+    "prompt": "The stratum corneum is significant in facial services because it:",
+    "options": {
+      "A": "Contains all living skin cells and should be protected at all times",
+      "B": "Is the outermost layer of dead keratinized cells that exfoliation targets to improve skin texture and product absorption",
+      "C": "Produces melanin and determines skin pigmentation",
+      "D": "Contains the sebaceous glands that regulate oil production"
+    },
+    "correct": "B",
+    "explanation": "The stratum corneum is the outermost sublayer of the epidermis, made of dead keratinized cells. Exfoliation removes accumulated dead cells from this layer to improve texture and allow moisturizers and treatments to penetrate more effectively.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 380,
+    "topic": "skin-and-nails",
+    "prompt": "A client has very dry skin around the cuticle area during a manicure. The cosmetologist softens the cuticle and gently pushes it back. The client then asks the cosmetologist to cut all the living tissue around the nail. The cosmetologist should:",
+    "options": {
+      "A": "Cut only the dead tissue (the pterygium) and leave the living cuticle (eponychium) intact",
+      "B": "Cut everything the client requests since it is their nails",
+      "C": "Remove all cuticle tissue to prevent hangnails",
+      "D": "Decline the entire manicure service if the client insists on cutting live tissue"
+    },
+    "correct": "A",
+    "explanation": "Only dead, overgrown tissue (pterygium) should be removed. The living cuticle (eponychium) seals the nail fold against infection — cutting it creates an entry point for bacteria and fungus.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 381,
+    "topic": "skin-and-nails",
+    "prompt": "A client asks for a paraffin wax treatment on her hands but mentions she has poor circulation and loses feeling in her fingers in cold weather. The cosmetologist should:",
+    "options": {
+      "A": "Proceed — paraffin is gentle and appropriate for all clients",
+      "B": "Ask about any diagnosed conditions and confirm there are no contraindications (such as Raynaud's or diabetes) before proceeding",
+      "C": "Increase the paraffin temperature slightly to compensate for circulation issues",
+      "D": "Substitute a hot stone treatment at high temperature instead"
+    },
+    "correct": "B",
+    "explanation": "Poor circulation and sensory loss in extremities can indicate Raynaud's disease, diabetes, or neuropathy — all of which are contraindications or require caution with heat treatments. The cosmetologist must screen before applying heat.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 382,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "A hydrogen peroxide developer is labeled 20 volume. This means it contains approximately:",
+    "options": {
+      "A": "20% hydrogen peroxide by weight",
+      "B": "6% hydrogen peroxide, equivalent to 20 times its volume in oxygen released",
+      "C": "20 mg of hydrogen peroxide per liter",
+      "D": "A concentration safe only for toning, not lifting"
+    },
+    "correct": "B",
+    "explanation": "Developer volume refers to the amount of oxygen released per volume of solution, not the percentage of peroxide. 20 volume = 6% H₂O₂, releasing 20 times its volume in oxygen. 10 vol = 3%, 30 vol = 9%, 40 vol = 12%.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 383,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "Ammonium thioglycolate in a perm waving lotion works by:",
+    "options": {
+      "A": "Oxidizing the disulfide bonds so the hair can be rinsed straight",
+      "B": "Reducing (breaking) the disulfide bonds in the cortex so the hair can be molded into a new shape around the rods",
+      "C": "Neutralizing the hair's pH to prepare it for the neutralizer step",
+      "D": "Depositing protein into the cortex to strengthen damaged hair before perming"
+    },
+    "correct": "B",
+    "explanation": "Ammonium thioglycolate is a reducing agent. It breaks (reduces) the disulfide bonds in the hair cortex, allowing the hair to soften and conform to the shape of the rod. The neutralizer then reforms the bonds in the new configuration.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 384,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "A styling product claims a pH of 3.5. Compared to the hair's natural pH of 4.5–5.5, this product is:",
+    "options": {
+      "A": "More alkaline than the hair and will open the cuticle",
+      "B": "More acidic than the hair — slightly below the hair's natural range, which will contract and close the cuticle",
+      "C": "Neutral and will have no effect on the cuticle",
+      "D": "Outside the range of any professional product and should not be used"
+    },
+    "correct": "B",
+    "explanation": "pH 3.5 is more acidic than the hair's natural 4.5–5.5 range. Acid-side products contract the cuticle, which can add shine and reduce porosity. They are safe but more aggressive than neutral or slightly acidic products.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 385,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "A cosmetologist mixes equal parts 30 volume developer and 10 volume developer. The resulting volume is approximately:",
+    "options": {
+      "A": "40 volume",
+      "B": "20 volume",
+      "C": "15 volume",
+      "D": "25 volume"
+    },
+    "correct": "B",
+    "explanation": "Mixing equal parts 30 volume and 10 volume averages the concentration: (30 + 10) / 2 = 20 volume. Understanding developer mixing is important for achieving predictable lift results.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 386,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "A client's scalp shows signs of contact dermatitis two days after a color service. This is most likely caused by:",
+    "options": {
+      "A": "The developer oxidizing the scalp's natural oils",
+      "B": "An allergic sensitization reaction to paraphenylenediamine (PPD) or another dye component — which is why patch tests are required",
+      "C": "The shampoo used after color was too alkaline",
+      "D": "Normal scalp sensitivity that resolves without intervention"
+    },
+    "correct": "B",
+    "explanation": "Contact dermatitis after hair color is a classic presentation of an allergic reaction to PPD or similar oxidative dye components. This is exactly why patch/skin allergy tests are legally required before color services — sensitization can develop at any time, even after years of safe use.",
+    "difficulty": "Hard"
   }
 ]

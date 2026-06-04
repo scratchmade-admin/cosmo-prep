@@ -64,6 +64,7 @@
           <p id="confidence-note" class="hidden" style="margin-top:0.5rem;font-style:italic;color:var(--accent);"></p>
           <div id="topic-breakdown" class="grid-2"></div>
           <div id="study-next" class="card" style="margin-top:1.5rem;"></div>
+          <div id="email-capture" class="card email-capture-card hidden" style="margin-top:1rem;"></div>
           <div class="quiz-controls" style="margin-top: 18px;">
             <button class="button button-secondary" type="button" id="new-set">Load a new set</button>
             <button class="button button-secondary" type="button" id="reset-quiz">Retake this set</button>
@@ -355,6 +356,7 @@
 
       buildTopicBreakdown(topicStats);
       buildStudyNext(topicStats);
+      renderEmailCapture();
       saveResult(score, currentQuestions.length, topicStats);
       resultBox.classList.remove('hidden');
       resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -557,6 +559,52 @@
           }
         });
       }
+    }
+
+    // ── Email capture (shown once, after first quiz, only if not signed in) ──
+    const EMAIL_CAPTURED_KEY = 'cosmo_email_captured';
+
+    function renderEmailCapture() {
+      const box = document.getElementById('email-capture');
+      if (!box) return;
+      const user = supabase.auth.getUser();
+      const alreadyCaptured = localStorage.getItem(EMAIL_CAPTURED_KEY);
+      if (user || alreadyCaptured) { box.classList.add('hidden'); return; }
+
+      box.classList.remove('hidden');
+      box.innerHTML = `
+        <div class="email-capture-inner">
+          <div>
+            <p class="email-capture-title">Want your results on your next device?</p>
+            <p class="email-capture-sub">Create a free account to sync history across phone, tablet, and desktop — or just save your email and we'll remind you.</p>
+          </div>
+          <div class="email-capture-actions">
+            <a href="login.html" class="button button-primary" style="white-space:nowrap;">Create free account</a>
+            <span class="email-capture-or">or</span>
+            <form id="email-form" class="email-inline-form">
+              <input type="email" id="capture-email" placeholder="your@email.com" required
+                style="padding:0.5rem 0.75rem;border:1px solid var(--line);border-radius:8px;font-size:0.9rem;font-family:inherit;flex:1;min-width:0;" />
+              <button type="submit" class="button button-secondary" style="white-space:nowrap;">Remind me</button>
+            </form>
+          </div>
+          <button id="dismiss-capture" style="background:none;border:none;color:var(--muted);font-size:0.75rem;cursor:pointer;margin-top:0.5rem;font-family:inherit;">No thanks</button>
+        </div>`;
+
+      document.getElementById('email-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('capture-email').value.trim();
+        if (!email) return;
+        // Save to Supabase email_leads table (fire-and-forget)
+        supabase.from('email_leads').insert({ email, source: 'quiz-results' }).catch(() => {});
+        localStorage.setItem(EMAIL_CAPTURED_KEY, '1');
+        box.innerHTML = '<p style="color:var(--primary);font-weight:600;padding:0.5rem 0;">Got it — we\'ll be in touch. Good luck on the exam. 🎓</p>';
+        setTimeout(() => box.classList.add('hidden'), 3000);
+      });
+
+      document.getElementById('dismiss-capture').addEventListener('click', () => {
+        localStorage.setItem(EMAIL_CAPTURED_KEY, '1');
+        box.classList.add('hidden');
+      });
     }
 
     fetch('quiz-data-rotation.json')

@@ -421,6 +421,26 @@ footer {
 .confidence-btn.selected[data-confidence="unsure"] { background: #fef9c3; border-color: #fde047; }
 .confidence-btn.selected[data-confidence="guess"]  { background: #fee2e2; border-color: #fca5a5; }
 
+/* ── Email capture ── */
+.email-capture-card { background: var(--surface-soft); border: 1px solid var(--line); }
+.email-capture-inner { display: flex; flex-direction: column; gap: 0.75rem; }
+.email-capture-title { font-weight: 700; font-size: 1rem; margin: 0; }
+.email-capture-sub { font-size: 0.85rem; color: var(--muted); margin: 0.25rem 0 0; }
+.email-capture-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.email-capture-or { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+.email-inline-form {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
 /* ── Auth chip ── */
 .auth-chip {
   display: flex;
