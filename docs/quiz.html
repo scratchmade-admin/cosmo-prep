@@ -477,6 +477,7 @@
         </div>`;
         document.getElementById('signout-btn').addEventListener('click', async () => {
           await supabase.auth.signOut();
+          localStorage.removeItem(HISTORY_KEY); // clear local so next user starts fresh
           renderAuthChip();
           renderHistory();
         });
@@ -503,11 +504,17 @@
 
     async function renderHistory() {
       const panel = document.getElementById('history-panel');
+      const isCloud = !!supabase.auth.getUser();
+      if (isCloud) panel.innerHTML = '<p style="font-size:0.8rem;color:var(--muted);padding:0 0.25rem;">Loading your progress...</p>';
       const history = await loadHistory();
-      if (history.length === 0) { panel.innerHTML = ''; return; }
+      if (history.length === 0) {
+        panel.innerHTML = isCloud
+          ? '<article class="card history-card"><p style="color:var(--muted);font-size:0.9rem;">No quizzes yet. Take your first quiz to start tracking progress.</p></article>'
+          : '';
+        return;
+      }
 
       const recent = history.slice(0, 5);
-      const isCloud = !!supabase.auth.getUser();
 
       const bars = recent.slice().reverse().map(e => {
         const pct = Math.round((e.score / e.total) * 100);
@@ -554,11 +561,11 @@
 
     fetch('quiz-data-rotation.json')
       .then((response) => response.json())
-      .then((data) => {
+      .then(async (data) => {
         questionBank = data;
         currentQuestions = buildQuestionSet();
         renderAuthChip();
-        renderHistory();
+        await renderHistory();
         renderQuiz();
       })
       .catch(() => {
