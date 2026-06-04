@@ -54,6 +54,8 @@
 
         <form id="quiz-form"></form>
 
+        <div id="history-panel"></div>
+
         <article class="card hidden" id="quiz-result">
           <h2>Your results</h2>
           <p id="quiz-score" class="lead"></p>
@@ -351,6 +353,7 @@
 
       buildTopicBreakdown(topicStats);
       buildStudyNext(topicStats);
+      saveResult(score, currentQuestions.length, topicStats);
       resultBox.classList.remove('hidden');
       resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
@@ -395,11 +398,101 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    // ── localStorage history ──────────────────────────────────────────
+    const HISTORY_KEY = 'cosmo_quiz_history';
+    const MAX_HISTORY = 10;
+
+    function loadHistory() {
+      try { return JSON.parse(localStorage.getItem(HISTORY_KEY)) || []; }
+      catch { return []; }
+    }
+
+    function saveResult(score, total, topicStats) {
+      const history = loadHistory();
+      const entry = {
+        date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+        score,
+        total,
+        topics: {}
+      };
+      Object.entries(topicStats).forEach(([t, d]) => {
+        entry.topics[t] = { correct: d.correct, total: d.total };
+      });
+      history.unshift(entry);
+      if (history.length > MAX_HISTORY) history.length = MAX_HISTORY;
+      try { localStorage.setItem(HISTORY_KEY, JSON.stringify(history)); } catch {}
+      renderHistory();
+    }
+
+    function trend(entries, topic) {
+      const pts = entries
+        .filter(e => e.topics[topic])
+        .slice(0, 5)
+        .reverse()
+        .map(e => Math.round((e.topics[topic].correct / e.topics[topic].total) * 100));
+      if (pts.length < 2) return '';
+      const delta = pts[pts.length - 1] - pts[0];
+      if (delta > 10) return ' <span class="trend up">↑</span>';
+      if (delta < -10) return ' <span class="trend down">↓</span>';
+      return ' <span class="trend flat">→</span>';
+    }
+
+    function renderHistory() {
+      const panel = document.getElementById('history-panel');
+      const history = loadHistory();
+      if (history.length === 0) { panel.innerHTML = ''; return; }
+
+      const recent = history.slice(0, 5);
+
+      // score sparkline bars
+      const bars = recent.slice().reverse().map(e => {
+        const pct = Math.round((e.score / e.total) * 100);
+        const color = pct >= 80 ? 'var(--primary)' : pct >= 65 ? 'var(--accent)' : '#ef4444';
+        return `<div class="spark-col">
+          <div class="spark-bar" style="height:${pct}%;background:${color};" title="${e.date}: ${pct}%"></div>
+          <div class="spark-label">${pct}%</div>
+        </div>`;
+      }).join('');
+
+      // per-topic trend across last 5
+      const topicRows = Object.keys(topicLabels).map(t => {
+        const appearances = recent.filter(e => e.topics[t]);
+        if (appearances.length === 0) return '';
+        const latest = appearances[0];
+        const pct = Math.round((latest.topics[t].correct / latest.topics[t].total) * 100);
+        const bar = `<div class="topic-bar-bg"><div class="topic-bar-fill" style="width:${pct}%;background:${pct >= 80 ? 'var(--primary)' : pct >= 65 ? 'var(--accent)' : '#ef4444'};"></div></div>`;
+        return `<div class="topic-row">
+          <span class="topic-row-label">${topicLabels[t]}${trend(recent, t)}</span>
+          ${bar}
+          <span class="topic-row-pct">${pct}%</span>
+        </div>`;
+      }).filter(Boolean).join('');
+
+      panel.innerHTML = `
+        <article class="card history-card">
+          <div class="history-header">
+            <h3>Your progress</h3>
+            <button class="history-clear" id="clear-history">Clear</button>
+          </div>
+          <p class="history-sub">Last ${recent.length} quiz${recent.length > 1 ? 'zes' : ''} on this device</p>
+          <div class="spark-chart">${bars}</div>
+          <div class="topic-trends">${topicRows}</div>
+        </article>`;
+
+      document.getElementById('clear-history').addEventListener('click', () => {
+        if (confirm('Clear all quiz history on this device?')) {
+          localStorage.removeItem(HISTORY_KEY);
+          renderHistory();
+        }
+      });
+    }
+
     fetch('quiz-data-rotation.json')
       .then((response) => response.json())
       .then((data) => {
         questionBank = data;
         currentQuestions = buildQuestionSet();
+        renderHistory();
         renderQuiz();
       })
       .catch(() => {
