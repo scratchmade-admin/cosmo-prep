@@ -1426,5 +1426,551 @@
     "correct": "B",
     "explanation": "Repetition plus explanation review builds judgment, not just memorization.",
     "difficulty": "Easy"
+  },
+  {
+    "id": 303,
+    "topic": "styling",
+    "prompt": "Pin curls are categorized by their base size and the direction of the curl. A full-base pin curl provides:",
+    "options": {
+      "A": "More volume and strength",
+      "B": "Less volume and a flatter result",
+      "C": "Only wave, no curl",
+      "D": "A tighter curl than a half-base curl"
+    },
+    "correct": "A",
+    "explanation": "A full-base pin curl sits fully on its base, giving more lift and volume compared to half-base or off-base placements.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 304,
+    "topic": "styling",
+    "prompt": "Which tool is best suited for adding volume at the root during a blow-dry service?",
+    "options": {
+      "A": "Fine-tooth comb",
+      "B": "Round brush",
+      "C": "Wide-tooth detangling comb",
+      "D": "Tail comb"
+    },
+    "correct": "B",
+    "explanation": "A round brush lifts the hair at the root while applying heat, creating volume and curl direction.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 305,
+    "topic": "styling",
+    "prompt": "When setting hair in rollers, the size of the roller affects the:",
+    "options": {
+      "A": "Color of the final style",
+      "B": "Size of the wave or curl produced",
+      "C": "Speed of drying only",
+      "D": "Amount of shampoo needed"
+    },
+    "correct": "B",
+    "explanation": "Larger rollers produce looser waves or curls; smaller rollers produce tighter ones.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 306,
+    "topic": "styling",
+    "prompt": "Finger waving is a technique that creates:",
+    "options": {
+      "A": "Tight spiral curls",
+      "B": "Soft, continuous S-shaped waves",
+      "C": "Straight, sleek sections",
+      "D": "Permanent curl patterns"
+    },
+    "correct": "B",
+    "explanation": "Finger waving uses the fingers and a comb to form soft S-shaped waves in wet hair.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 307,
+    "topic": "styling",
+    "prompt": "An off-base roller placement is used mainly to create:",
+    "options": {
+      "A": "Maximum lift and volume",
+      "B": "Minimal lift and a closer wave pattern",
+      "C": "A straight result with no curl",
+      "D": "Only backward wave movement"
+    },
+    "correct": "B",
+    "explanation": "Off-base placement means the roller sits off its base section, producing less root lift and a flatter result.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 308,
+    "topic": "styling",
+    "prompt": "When thermal curling with a conventional iron, the hair should be:",
+    "options": {
+      "A": "Wet for best results",
+      "B": "Completely dry before use",
+      "C": "Partially wet to create steam",
+      "D": "Chemically relaxed only"
+    },
+    "correct": "B",
+    "explanation": "Conventional curling irons are designed for use on dry hair. Using them on wet hair can cause damage or uneven results.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 309,
+    "topic": "styling",
+    "prompt": "A cascade curl is formed by rolling hair so that:",
+    "options": {
+      "A": "All curls sit flat on base",
+      "B": "Curl direction alternates every row",
+      "C": "Curls overlap and fall over each other when released",
+      "D": "Only foam rollers are used"
+    },
+    "correct": "C",
+    "explanation": "Cascade curls roll in a way that the curls fall over each other when released, creating a flowing, layered look.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 310,
+    "topic": "styling",
+    "prompt": "Which blow-dry technique is safest for minimizing heat damage?",
+    "options": {
+      "A": "Holding the dryer in one spot until dry",
+      "B": "Keeping the dryer moving and maintaining distance from the hair",
+      "C": "Using the highest heat setting for speed",
+      "D": "Blow-drying soaking wet hair without a nozzle"
+    },
+    "correct": "B",
+    "explanation": "Keeping the dryer moving and at a safe distance distributes heat evenly and reduces the risk of damage.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 311,
+    "topic": "styling",
+    "prompt": "Hair pressing uses heat and pressure to temporarily:",
+    "options": {
+      "A": "Color the hair shaft",
+      "B": "Permanently change the wave pattern",
+      "C": "Straighten overly curly hair",
+      "D": "Lift the cuticle permanently"
+    },
+    "correct": "C",
+    "explanation": "Hair pressing temporarily straightens curly hair using a pressing comb and heat. It is not permanent.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 312,
+    "topic": "styling",
+    "prompt": "The croquignole method of thermal curling winds the hair:",
+    "options": {
+      "A": "From the scalp toward the ends",
+      "B": "From the ends toward the scalp",
+      "C": "In alternating directions",
+      "D": "Only on the nape area"
+    },
+    "correct": "B",
+    "explanation": "Croquignole winding starts at the hair ends and winds toward the scalp, producing a curl tighter at the ends.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 313,
+    "topic": "styling",
+    "prompt": "When a client wants to reduce frizz during a blow-dry, the best technique is to:",
+    "options": {
+      "A": "Use a vent brush and high heat",
+      "B": "Direct airflow down the cuticle with a nozzle attachment",
+      "C": "Rough-dry without any attachment for speed",
+      "D": "Skip conditioner before blow-drying"
+    },
+    "correct": "B",
+    "explanation": "Directing airflow down the cuticle with a concentrator nozzle smooths the hair and reduces frizz.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 314,
+    "topic": "skin-and-nails",
+    "prompt": "The dermis layer of the skin contains:",
+    "options": {
+      "A": "Only dead cells",
+      "B": "Collagen fibers, blood vessels, and nerve endings",
+      "C": "Melanin only",
+      "D": "No living structures"
+    },
+    "correct": "B",
+    "explanation": "The dermis is the deeper skin layer containing collagen, elastin, blood vessels, nerve endings, and glands.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 315,
+    "topic": "skin-and-nails",
+    "prompt": "Sebaceous glands in the skin are responsible for producing:",
+    "options": {
+      "A": "Sweat",
+      "B": "Sebum, the skin's natural oil",
+      "C": "Collagen",
+      "D": "Melanin"
+    },
+    "correct": "B",
+    "explanation": "Sebaceous glands produce sebum, which lubricates and protects the skin and hair.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 316,
+    "topic": "skin-and-nails",
+    "prompt": "A client presents with a highly inflamed, pustular skin condition on the face. The safest action is to:",
+    "options": {
+      "A": "Proceed with a standard facial",
+      "B": "Apply a stronger exfoliant to reduce inflammation",
+      "C": "Refer the client to a physician and not perform the service",
+      "D": "Use steam to open the pores and extract"
+    },
+    "correct": "C",
+    "explanation": "Inflamed pustular conditions may indicate infection or a condition outside a cosmetologist's scope. Referral is the safest response.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 317,
+    "topic": "skin-and-nails",
+    "prompt": "The eponychium is another name for the:",
+    "options": {
+      "A": "Free edge of the nail",
+      "B": "Cuticle",
+      "C": "Nail body",
+      "D": "Lunula"
+    },
+    "correct": "B",
+    "explanation": "The eponychium, commonly called the cuticle, is the overlapping skin at the base of the nail plate.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 318,
+    "topic": "skin-and-nails",
+    "prompt": "The lunula is the:",
+    "options": {
+      "A": "Area under the free edge",
+      "B": "White, half-moon shaped area at the base of the nail",
+      "C": "Side wall of the nail",
+      "D": "Nail bed"
+    },
+    "correct": "B",
+    "explanation": "The lunula is the visible portion of the nail matrix, appearing as a white crescent at the base of the nail.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 319,
+    "topic": "skin-and-nails",
+    "prompt": "Which condition of the nails would be a contraindication for a manicure service?",
+    "options": {
+      "A": "Dry cuticles",
+      "B": "Short nail length",
+      "C": "Signs of a fungal infection",
+      "D": "Naturally thin nails"
+    },
+    "correct": "C",
+    "explanation": "A fungal nail infection is a contraindication. Performing a service could spread the infection or worsen the condition.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 320,
+    "topic": "skin-and-nails",
+    "prompt": "Melanin is produced by cells called:",
+    "options": {
+      "A": "Keratinocytes",
+      "B": "Melanocytes",
+      "C": "Fibroblasts",
+      "D": "Sebocytes"
+    },
+    "correct": "B",
+    "explanation": "Melanocytes are specialized cells in the skin that produce melanin, the pigment that gives skin and hair its color.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 321,
+    "topic": "hair-fundamentals",
+    "prompt": "The medulla is the innermost layer of the hair shaft and is:",
+    "options": {
+      "A": "Always present in every hair type",
+      "B": "Sometimes absent in fine or light-colored hair",
+      "C": "Responsible for hair color",
+      "D": "The layer that determines porosity"
+    },
+    "correct": "B",
+    "explanation": "The medulla is sometimes absent in very fine or light hair. Its function in cosmetology is generally considered less significant than the cortex.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 322,
+    "topic": "hair-fundamentals",
+    "prompt": "Low porosity hair has difficulty absorbing moisture because:",
+    "options": {
+      "A": "The cuticle layer is raised and open",
+      "B": "The cuticle layer is tightly closed",
+      "C": "The cortex is missing",
+      "D": "The hair lacks a medulla"
+    },
+    "correct": "B",
+    "explanation": "Low porosity hair has a tightly closed cuticle that resists moisture absorption. Heat or pre-treatment is often needed to open it.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 323,
+    "topic": "hair-fundamentals",
+    "prompt": "The catagen phase of the hair growth cycle is:",
+    "options": {
+      "A": "The active growing phase",
+      "B": "The resting phase",
+      "C": "A short transitional phase where growth stops",
+      "D": "The shedding phase"
+    },
+    "correct": "C",
+    "explanation": "Catagen is the brief transition phase between active growth (anagen) and resting (telogen). The hair stops growing and detaches from the blood supply.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 324,
+    "topic": "hair-fundamentals",
+    "prompt": "The chemical bonds most affected by water and wet setting are:",
+    "options": {
+      "A": "Disulfide bonds",
+      "B": "Hydrogen bonds",
+      "C": "Salt bonds",
+      "D": "Peptide bonds"
+    },
+    "correct": "B",
+    "explanation": "Hydrogen bonds are weak and easily broken by water, which is why wet setting and blow-drying can temporarily change the hair's shape.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 325,
+    "topic": "hair-fundamentals",
+    "prompt": "Healthy hair with normal elasticity should stretch approximately how much when wet before breaking?",
+    "options": {
+      "A": "5%",
+      "B": "20%",
+      "C": "50%",
+      "D": "75%"
+    },
+    "correct": "C",
+    "explanation": "Healthy hair can stretch up to about 50% of its length when wet before breaking, indicating good elasticity.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 326,
+    "topic": "shampoo-and-draping",
+    "prompt": "A clarifying shampoo is best used to:",
+    "options": {
+      "A": "Add moisture to dry hair",
+      "B": "Remove product buildup and mineral deposits",
+      "C": "Protect chemically treated hair",
+      "D": "Replace conditioner for oily scalps"
+    },
+    "correct": "B",
+    "explanation": "Clarifying shampoos are formulated to deep-clean the hair by removing buildup from styling products and hard water minerals.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 327,
+    "topic": "shampoo-and-draping",
+    "prompt": "When draping for a chemical service, the towel is placed:",
+    "options": {
+      "A": "Over the cape to prevent chemical contact with skin",
+      "B": "Under the cape so the cape goes directly on the client's skin",
+      "C": "Around the eyes",
+      "D": "Across the lap"
+    },
+    "correct": "A",
+    "explanation": "For chemical services, the towel goes over the client's skin at the neckline and the cape covers the towel to protect against chemical contact.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 328,
+    "topic": "shampoo-and-draping",
+    "prompt": "After shampooing, excess water should be removed by:",
+    "options": {
+      "A": "Vigorous rubbing with the towel",
+      "B": "Gently blotting and squeezing the hair with a towel",
+      "C": "Wringing the hair tightly",
+      "D": "Combing immediately without removing water"
+    },
+    "correct": "B",
+    "explanation": "Gentle blotting and squeezing removes water without roughing up the cuticle or causing breakage.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 329,
+    "topic": "shampoo-and-draping",
+    "prompt": "Which type of shampoo is most appropriate for a client with an oily scalp?",
+    "options": {
+      "A": "Moisturizing shampoo",
+      "B": "Balancing or clarifying shampoo",
+      "C": "Conditioning shampoo",
+      "D": "Color-depositing shampoo"
+    },
+    "correct": "B",
+    "explanation": "A balancing or clarifying shampoo removes excess oil from the scalp without adding more moisture.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 330,
+    "topic": "shampoo-and-draping",
+    "prompt": "The primary reason to section thick or long hair before shampooing is to:",
+    "options": {
+      "A": "Create a style during the shampoo",
+      "B": "Ensure the scalp and all hair are thoroughly cleansed",
+      "C": "Speed up the color process",
+      "D": "Prevent the cape from slipping"
+    },
+    "correct": "B",
+    "explanation": "Sectioning ensures the shampoo reaches the scalp and all areas are fully cleansed in thick or long hair.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 331,
+    "topic": "haircutting",
+    "prompt": "When cutting a one-length bob, all the hair is:",
+    "options": {
+      "A": "Elevated to 90 degrees",
+      "B": "Cut at zero elevation so it falls to one level",
+      "C": "Layered throughout",
+      "D": "Overdirected forward"
+    },
+    "correct": "B",
+    "explanation": "A one-length bob is cut with no elevation. The hair falls to one level, creating a solid, blunt line.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 332,
+    "topic": "haircutting",
+    "prompt": "Low elevation angles, such as 0 to 45 degrees, tend to:",
+    "options": {
+      "A": "Remove all weight from the perimeter",
+      "B": "Build weight and create a heavier perimeter line",
+      "C": "Create maximum layering throughout",
+      "D": "Eliminate bulk at the nape"
+    },
+    "correct": "B",
+    "explanation": "Low elevation angles keep weight in the perimeter, building bulk and a heavier line, as seen in bobs and blunt cuts.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 333,
+    "topic": "haircutting",
+    "prompt": "When using a razor for haircutting, the hair should be:",
+    "options": {
+      "A": "Completely dry",
+      "B": "Damp to wet",
+      "C": "Freshly heat-styled",
+      "D": "Coated in product first"
+    },
+    "correct": "B",
+    "explanation": "Razor cutting requires damp hair to allow the blade to slide smoothly and reduce the risk of snagging or uneven cuts.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 334,
+    "topic": "haircutting",
+    "prompt": "In haircutting, the weight line refers to:",
+    "options": {
+      "A": "The heaviest product applied during styling",
+      "B": "The area where the hair appears most dense or falls in a solid mass",
+      "C": "The number of sections used during the cut",
+      "D": "The elevation angle used at the crown"
+    },
+    "correct": "B",
+    "explanation": "The weight line is where the hair concentrates into a solid, dense-looking mass — typically at the perimeter or a graduation line.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 335,
+    "topic": "haircutting",
+    "prompt": "Texturizing a haircut is done mainly to:",
+    "options": {
+      "A": "Create a blunt, one-length effect",
+      "B": "Remove bulk and soften the ends without removing significant length",
+      "C": "Add maximum weight to thin hair",
+      "D": "Eliminate all curl pattern"
+    },
+    "correct": "B",
+    "explanation": "Texturizing removes bulk and creates movement or softness in the ends without significantly changing the overall length.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 336,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "The largest organ of the human body is the:",
+    "options": {
+      "A": "Liver",
+      "B": "Brain",
+      "C": "Skin",
+      "D": "Lung"
+    },
+    "correct": "C",
+    "explanation": "The skin is the largest organ of the body by surface area and weight, serving as a protective barrier.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 337,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "Keratin is the protein that makes up the majority of:",
+    "options": {
+      "A": "Blood cells",
+      "B": "Hair and nails",
+      "C": "Muscle tissue",
+      "D": "Bone structure"
+    },
+    "correct": "B",
+    "explanation": "Keratin is the fibrous structural protein that forms the hair shaft, nails, and the outer layer of skin.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 338,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "Which type of chemical reaction involves a substance gaining hydrogen or losing oxygen?",
+    "options": {
+      "A": "Oxidation",
+      "B": "Reduction",
+      "C": "Emulsification",
+      "D": "Neutralization"
+    },
+    "correct": "B",
+    "explanation": "Reduction involves gaining hydrogen or losing oxygen. In cosmetology, the reducing step in a perm softens and breaks disulfide bonds.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 339,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "Surfactants in shampoo work by:",
+    "options": {
+      "A": "Sealing the cuticle tightly",
+      "B": "Attracting both water and oil to lift debris from the hair",
+      "C": "Permanently bonding to the cortex",
+      "D": "Increasing hair elasticity"
+    },
+    "correct": "B",
+    "explanation": "Surfactants have a water-loving end and an oil-loving end, allowing them to surround oil and dirt so water can rinse it away.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 340,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "A buffer solution in cosmetology products is used to:",
+    "options": {
+      "A": "Add artificial color to the formula",
+      "B": "Stabilize the pH so it does not shift during use",
+      "C": "Increase the product's viscosity",
+      "D": "Speed up oxidation reactions"
+    },
+    "correct": "B",
+    "explanation": "Buffer solutions resist changes in pH, keeping the product stable and performing consistently.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 341,
+    "topic": "law-and-safety",
+    "prompt": "Under California law, a cosmetology license must be renewed:",
+    "options": {
+      "A": "Every year",
+      "B": "Every two years",
+      "C": "Every five years",
+      "D": "Only once after initial issuance"
+    },
+    "correct": "B",
+    "explanation": "California cosmetology licenses are renewed on a two-year cycle. Failure to renew results in an expired license.",
+    "difficulty": "Medium"
   }
 ]
