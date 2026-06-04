@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Account | California Cosmetology Prep</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Account page local styles ── */
+    .account-hero { padding: 2rem 0 1rem; }
+    .account-hero .eyebrow { margin-bottom: 0.25rem; }
+    .account-hero h1 { margin: 0 0 0.25rem; font-size: 1.75rem; }
+    .account-hero .level-row { display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap; margin-top:0.5rem; }
+    .level-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--primary); color: #fff;
+      padding: 0.3rem 0.9rem; border-radius: 20px;
+      font-size: 0.85rem; font-weight: 700;
+    }
+    .level-progress-wrap { flex:1; min-width:120px; max-width:200px; }
+    .level-progress-label { font-size:0.75rem; color:var(--muted); margin-bottom:3px; }
+    .level-progress-bar-bg { background:var(--surface-soft); border-radius:6px; height:8px; overflow:hidden; }
+    .level-progress-bar-fill { background:var(--primary); height:100%; border-radius:6px; transition:width .4s; }
+
+    /* stats row */
+    .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin:1.5rem 0; }
+    @media(max-width:600px){ .stats-grid { grid-template-columns:repeat(2,1fr); } }
+    .stat-card { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:1rem; text-align:center; }
+    .stat-value { font-size:2rem; font-weight:800; color:var(--primary); line-height:1; }
+    .stat-label { font-size:0.75rem; color:var(--muted); margin-top:0.3rem; font-weight:600; text-transform:uppercase; letter-spacing:.04em; }
+    .stat-sub { font-size:0.75rem; color:var(--muted); margin-top:0.15rem; }
+
+    /* badges */
+    .badges-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:1rem; }
+    .badge-card {
+      background:var(--surface); border:1px solid var(--line); border-radius:12px;
+      padding:1rem; text-align:center; transition:opacity .2s;
+    }
+    .badge-card.locked { opacity:.35; filter:grayscale(1); }
+    .badge-icon { font-size:2rem; display:block; margin-bottom:0.4rem; line-height:1; }
+    .badge-name { font-size:0.8rem; font-weight:700; color:var(--ink); }
+    .badge-desc { font-size:0.72rem; color:var(--muted); margin-top:0.2rem; }
+    .badge-card:not(.locked) { border-color:var(--primary); background:linear-gradient(135deg,#f5f0ff,#fff); }
+
+    /* topic mastery */
+    .mastery-row { display:grid; grid-template-columns:1fr 2fr auto; align-items:center; gap:.75rem; padding:.4rem 0; border-bottom:1px solid var(--line); font-size:.85rem; }
+    .mastery-row:last-child { border-bottom:none; }
+    .mastery-label { font-weight:600; }
+    .mastery-bar-bg { background:var(--surface-soft); border-radius:6px; height:10px; overflow:hidden; }
+    .mastery-bar-fill { height:100%; border-radius:6px; transition:width .5s; }
+    .mastery-pct { font-weight:700; min-width:2.5rem; text-align:right; }
+
+    /* history table */
+    .history-table { width:100%; border-collapse:collapse; font-size:.875rem; }
+    .history-table th { text-align:left; padding:.5rem .75rem; font-size:.75rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); border-bottom:2px solid var(--line); }
+    .history-table td { padding:.6rem .75rem; border-bottom:1px solid var(--line); vertical-align:top; }
+    .history-table tr:last-child td { border-bottom:none; }
+    .score-chip { display:inline-block; padding:.15rem .5rem; border-radius:12px; font-weight:700; font-size:.8rem; }
+    .score-great { background:#d1fae5; color:#065f46; }
+    .score-ok    { background:#fef9c3; color:#854d0e; }
+    .score-low   { background:#fee2e2; color:#991b1b; }
+    .topic-pills-mini { display:flex; flex-wrap:wrap; gap:.3rem; margin-top:.35rem; }
+    .topic-mini-pill { font-size:.68rem; padding:.1rem .45rem; border-radius:10px; font-weight:600; }
+
+    .signout-section { margin-top:2.5rem; padding-top:1.5rem; border-top:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+    .signout-section p { color:var(--muted); font-size:.85rem; margin:0; }
+
+    .empty-state { text-align:center; padding:3rem 1rem; color:var(--muted); }
+    .empty-state p { max-width:340px; margin:.5rem auto 1.5rem; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html">California Cosmetology Prep</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="study-guide.html">Study Guide</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="faq.html">FAQ</a>
+        <a href="cram-plan.html">3-Day Plan</a>
+        <a href="account.html" class="nav-auth-link active">Account</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div id="account-root">
+      <section class="wrap">
+        <p style="color:var(--muted);padding:3rem 0;">Loading your account...</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">California Cosmetology Prep is an independent study resource. Not affiliated with or endorsed by the California Board of Barbering and Cosmetology.</div>
+  </footer>
+
+  <script src="supabase.js"></script>
+  <script>
+    const HISTORY_KEY  = 'cosmo_quiz_history';
+    const SESSION_KEY  = 'cosmo_sb_session';
+
+    const topicLabels = {
+      'sanitation':           'Sanitation',
+      'law-and-safety':       'Law & Safety',
+      'hair-fundamentals':    'Hair Fundamentals',
+      'haircutting':          'Haircutting',
+      'styling':              'Styling',
+      'shampoo-and-draping':  'Shampoo & Draping',
+      'chemical-services':    'Chemical Services',
+      'skin-and-nails':       'Skin & Nails',
+      'anatomy-and-chemistry':'Anatomy & Chemistry'
+    };
+
+    const topicLinks = {
+      'sanitation':           'study-guide.html#module-1',
+      'law-and-safety':       'study-guide.html#module-2',
+      'hair-fundamentals':    'study-guide.html#module-3',
+      'shampoo-and-draping':  'study-guide.html#module-4',
+      'haircutting':          'study-guide.html#module-5',
+      'styling':              'study-guide.html#module-5',
+      'chemical-services':    'study-guide.html#module-6',
+      'skin-and-nails':       'study-guide.html#module-7',
+      'anatomy-and-chemistry':'study-guide.html#module-8',
+    };
+
+    // ── Levels ──────────────────────────────────────────────────────
+    const LEVELS = [
+      { name:'Beginner',     emoji:'🌱', min:0,  max:2  },
+      { name:'Student',      emoji:'📖', min:3,  max:5  },
+      { name:'Apprentice',   emoji:'✂️',  min:6,  max:10 },
+      { name:'Practitioner', emoji:'💼', min:11, max:20 },
+      { name:'Expert',       emoji:'⭐', min:21, max:40 },
+      { name:'Exam Ready',   emoji:'🏆', min:41, max:Infinity },
+    ];
+
+    function getLevel(total) {
+      return LEVELS.find(l => total >= l.min && total <= l.max) || LEVELS[0];
+    }
+
+    function getLevelProgress(total) {
+      const level = getLevel(total);
+      if (level.max === Infinity) return { pct: 100, next: null };
+      const span = level.max - level.min + 1;
+      const done = total - level.min;
+      const pct  = Math.round((done / span) * 100);
+      const next = LEVELS[LEVELS.indexOf(level) + 1];
+      return { pct, next };
+    }
+
+    // ── Badges ──────────────────────────────────────────────────────
+    function computeBadges(history) {
+      const total = history.length;
+      const scores = history.map(e => Math.round((e.score / e.total) * 100));
+      const avgScore = scores.length ? Math.round(scores.reduce((a,b)=>a+b,0)/scores.length) : 0;
+      const bestScore = scores.length ? Math.max(...scores) : 0;
+
+      // Per-topic averages across all quizzes
+      const topicAccum = {};
+      history.forEach(e => {
+        Object.entries(e.topics||{}).forEach(([t,d]) => {
+          if (!topicAccum[t]) topicAccum[t] = { correct:0, total:0, count:0 };
+          topicAccum[t].correct += d.correct;
+          topicAccum[t].total   += d.total;
+          topicAccum[t].count   += 1;
+        });
+      });
+      const topicAvg = t => topicAccum[t]
+        ? Math.round((topicAccum[t].correct / topicAccum[t].total) * 100)
+        : 0;
+
+      // Timed mode: detect via localStorage flag
+      const timedDone = !!localStorage.getItem('cosmo_timed_done');
+
+      // All-rounder: any single quiz with all topics >= 70%
+      const allRounder = history.some(e => {
+        const topics = Object.values(e.topics||{});
+        return topics.length >= 7 && topics.every(d => Math.round((d.correct/d.total)*100) >= 70);
+      });
+
+      // Comeback: any consecutive pair with 20%+ improvement
+      const comeback = scores.some((s,i) => i > 0 && s - scores[i-1] >= 20);
+
+      // Streak: compute from entries that have ISO timestamps (Supabase) or fall back
+      const streak = computeStreak(history);
+
+      // Last-3 average for "Exam Ready"
+      const last3avg = scores.slice(0,3).length >= 3
+        ? Math.round(scores.slice(0,3).reduce((a,b)=>a+b,0)/3) : 0;
+
+      return [
+        { id:'first',       icon:'🎯', name:'First Step',        desc:'Took your first quiz',                   earned: total >= 1 },
+        { id:'five',        icon:'🔁', name:'Getting Consistent', desc:'Completed 5 quizzes',                    earned: total >= 5 },
+        { id:'ten',         icon:'📚', name:'Dedicated',          desc:'Completed 10 quizzes',                   earned: total >= 10 },
+        { id:'twenty',      icon:'🧠', name:'Grinder',            desc:'Completed 20 quizzes',                   earned: total >= 20 },
+        { id:'perfect',     icon:'💯', name:'Perfect Score',      desc:'Scored 20/20 on a quiz',                 earned: bestScore === 100 },
+        { id:'streak3',     icon:'🔥', name:'On a Roll',          desc:'3-day study streak',                     earned: streak >= 3 },
+        { id:'streak7',     icon:'⚡', name:'Week Warrior',       desc:'7-day study streak',                     earned: streak >= 7 },
+        { id:'sanitation',  icon:'🧼', name:'Sanitation Pro',     desc:'Averaged 90%+ in Sanitation',            earned: topicAvg('sanitation') >= 90 && (topicAccum['sanitation']?.count||0) >= 3 },
+        { id:'chemical',    icon:'⚗️', name:'Chemical Expert',    desc:'Averaged 90%+ in Chemical Services',     earned: topicAvg('chemical-services') >= 90 && (topicAccum['chemical-services']?.count||0) >= 3 },
+        { id:'law',         icon:'⚖️', name:'Law & Order',        desc:'Averaged 90%+ in Law & Safety',          earned: topicAvg('law-and-safety') >= 90 && (topicAccum['law-and-safety']?.count||0) >= 3 },
+        { id:'timed',       icon:'⏱️', name:'Under Pressure',     desc:'Completed a timed quiz',                 earned: timedDone },
+        { id:'allround',    icon:'🌟', name:'All-Rounder',        desc:'70%+ on all topics in one quiz',         earned: allRounder },
+        { id:'comeback',    icon:'📈', name:'Comeback',           desc:'Improved score 20%+ from prior quiz',    earned: comeback },
+        { id:'examready',   icon:'🏆', name:'Exam Ready',         desc:'Averaged 85%+ across last 3 quizzes',   earned: last3avg >= 85 },
+      ];
+    }
+
+    function computeStreak(history) {
+      if (!history.length) return 0;
+      // Try to use ISO timestamps; fall back to 0 if only string dates available
+      const entries = history
+        .map(e => e.taken_at || null)
+        .filter(Boolean)
+        .map(ts => new Date(ts).toDateString());
+      if (!entries.length) return 0;
+      const unique = [...new Set(entries)];
+      const today = new Date().toDateString();
+      let streak = 0;
+      let check  = new Date();
+      for (let i = 0; i < 60; i++) {
+        if (unique.includes(check.toDateString())) {
+          streak++;
+          check.setDate(check.getDate() - 1);
+        } else if (i === 0) {
+          // Might not have quizzed today yet — check yesterday as start
+          check.setDate(check.getDate() - 1);
+        } else {
+          break;
+        }
+      }
+      return streak;
+    }
+
+    // ── Topic mastery ────────────────────────────────────────────────
+    function computeTopicMastery(history) {
+      const accum = {};
+      history.forEach(e => {
+        Object.entries(e.topics||{}).forEach(([t,d]) => {
+          if (!accum[t]) accum[t] = { correct:0, total:0 };
+          accum[t].correct += d.correct;
+          accum[t].total   += d.total;
+        });
+      });
+      return Object.keys(topicLabels).map(t => {
+        const a = accum[t];
+        const pct = a ? Math.round((a.correct / a.total) * 100) : null;
+        return { topic: t, label: topicLabels[t], pct, link: topicLinks[t] };
+      }).filter(m => m.pct !== null).sort((a,b) => a.pct - b.pct);
+    }
+
+    // ── Render ───────────────────────────────────────────────────────
+    function masteryColor(pct) {
+      return pct >= 80 ? 'var(--primary)' : pct >= 65 ? 'var(--accent)' : '#ef4444';
+    }
+
+    function scoreChip(pct) {
+      const cls = pct >= 80 ? 'score-great' : pct >= 65 ? 'score-ok' : 'score-low';
+      return `<span class="score-chip ${cls}">${pct}%</span>`;
+    }
+
+    function renderPage(user, history) {
+      const root = document.getElementById('account-root');
+      const total = history.length;
+      const scores = history.map(e => Math.round((e.score / e.total) * 100));
+      const avgScore = scores.length ? Math.round(scores.reduce((a,b)=>a+b,0)/scores.length) : 0;
+      const bestScore = scores.length ? Math.max(...scores) : 0;
+      const level = getLevel(total);
+      const { pct: lvlPct, next: lvlNext } = getLevelProgress(total);
+      const streak = computeStreak(history);
+      const badges = computeBadges(history);
+      const mastery = computeTopicMastery(history);
+      const earned = badges.filter(b => b.earned).length;
+
+      // improvement: last 3 vs first 3
+      const first3 = scores.slice(-3);
+      const last3  = scores.slice(0,3);
+      const improvement = first3.length >= 3 && last3.length >= 3
+        ? Math.round(last3.reduce((a,b)=>a+b,0)/3) - Math.round(first3.reduce((a,b)=>a+b,0)/3)
+        : null;
+
+      root.innerHTML = `
+        <!-- Hero -->
+        <section class="wrap account-hero">
+          <div class="eyebrow">Your account</div>
+          <h1>${user.email}</h1>
+          <div class="level-row">
+            <span class="level-badge">${level.emoji} ${level.name}</span>
+            ${lvlNext ? `
+              <div class="level-progress-wrap">
+                <div class="level-progress-label">${total} quiz${total!==1?'es':''} · ${lvlNext.max - total + 1} to ${lvlNext.emoji} ${lvlNext.name}</div>
+                <div class="level-progress-bar-bg"><div class="level-progress-bar-fill" style="width:${lvlPct}%"></div></div>
+              </div>` : `<span style="font-size:.85rem;color:var(--primary);font-weight:700;">Maximum level reached 🎉</span>`}
+          </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="wrap">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-value">${total}</div>
+              <div class="stat-label">Quizzes taken</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" style="color:${masteryColor(bestScore)}">${total ? bestScore+'%' : '—'}</div>
+              <div class="stat-label">Best score</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" style="color:${masteryColor(avgScore)}">${total ? avgScore+'%' : '—'}</div>
+              <div class="stat-label">Average score</div>
+              ${improvement !== null ? `<div class="stat-sub">${improvement >= 0 ? '↑' : '↓'} ${Math.abs(improvement)}% vs start</div>` : ''}
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" style="color:${streak >= 3 ? '#16a34a' : 'var(--ink)'}">${streak}${streak >= 3 ? ' 🔥' : ''}</div>
+              <div class="stat-label">Day streak</div>
+              <div class="stat-sub">${streak === 1 ? 'Keep going!' : streak === 0 ? 'Take a quiz today' : 'Keep it up!'}</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Badges -->
+        <section class="wrap">
+          <div class="section-head">
+            <h2>Badges <span style="font-size:1rem;color:var(--muted);font-weight:400;">${earned} of ${badges.length} earned</span></h2>
+            <p>Earn badges by reaching milestones, mastering topics, and showing up consistently.</p>
+          </div>
+          <div class="badges-grid">
+            ${badges.map(b => `
+              <div class="badge-card${b.earned ? '' : ' locked'}">
+                <span class="badge-icon">${b.icon}</span>
+                <div class="badge-name">${b.name}</div>
+                <div class="badge-desc">${b.desc}</div>
+              </div>`).join('')}
+          </div>
+        </section>
+
+        <!-- Topic mastery -->
+        <section class="wrap">
+          <div class="section-head">
+            <h2>Topic mastery</h2>
+            <p>Average score per topic across all your quizzes. Your weakest topics are listed first.</p>
+          </div>
+          <div class="card">
+            ${mastery.length ? mastery.map(m => `
+              <div class="mastery-row">
+                <a class="mastery-label" href="${m.link}" style="color:var(--ink);text-decoration:none;">${m.label}</a>
+                <div class="mastery-bar-bg"><div class="mastery-bar-fill" style="width:${m.pct}%;background:${masteryColor(m.pct)};"></div></div>
+                <span class="mastery-pct" style="color:${masteryColor(m.pct)}">${m.pct}%</span>
+              </div>`).join('')
+            : '<p style="color:var(--muted)">No topic data yet — take a quiz to see your mastery breakdown.</p>'}
+          </div>
+        </section>
+
+        <!-- Quiz history -->
+        <section class="wrap">
+          <div class="section-head">
+            <h2>Quiz history</h2>
+            <p>Your ${Math.min(history.length, 20)} most recent attempts.</p>
+          </div>
+          ${history.length === 0
+            ? `<div class="empty-state card">
+                <p style="font-size:2rem">📋</p>
+                <p>No quizzes yet. Take your first quiz to start building history.</p>
+                <a class="button button-primary" href="quiz.html">Take a quiz</a>
+               </div>`
+            : `<div class="card" style="overflow-x:auto;">
+                <table class="history-table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Score</th>
+                      <th>Weakest topics</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${history.slice(0,20).map(e => {
+                      const pct = Math.round((e.score/e.total)*100);
+                      const weak = Object.entries(e.topics||{})
+                        .map(([t,d])=>({t,p:Math.round((d.correct/d.total)*100)}))
+                        .sort((a,b)=>a.p-b.p)
+                        .slice(0,3);
+                      const weakPills = weak.map(w => {
+                        const c = w.p>=80?'#d1fae5;color:#065f46':w.p>=65?'#fef9c3;color:#854d0e':'#fee2e2;color:#991b1b';
+                        return `<span class="topic-mini-pill" style="background:${c}">${topicLabels[w.t]||w.t} ${w.p}%</span>`;
+                      }).join('');
+                      return `<tr>
+                        <td style="white-space:nowrap;color:var(--muted)">${e.date}</td>
+                        <td>${scoreChip(pct)} <span style="font-size:.8rem;color:var(--muted)">${e.score}/${e.total}</span></td>
+                        <td><div class="topic-pills-mini">${weakPills || '<span style="color:var(--muted);font-size:.8rem">All good</span>'}</div></td>
+                      </tr>`;
+                    }).join('')}
+                  </tbody>
+                </table>
+              </div>`}
+        </section>
+
+        <!-- Sign out -->
+        <section class="wrap">
+          <div class="signout-section">
+            <p>Signed in as <strong>${user.email}</strong>. Your quiz history syncs automatically across devices.</p>
+            <button class="button button-secondary" id="signout-btn">Sign out</button>
+          </div>
+        </section>`;
+
+      document.getElementById('signout-btn').addEventListener('click', async () => {
+        await supabase.auth.signOut();
+        localStorage.removeItem('cosmo_quiz_history');
+        window.location.href = 'login.html';
+      });
+    }
+
+    // ── Boot ─────────────────────────────────────────────────────────
+    async function boot() {
+      const user = supabase.auth.getUser();
+      if (!user) { window.location.href = 'login.html'; return; }
+
+      // Load history from Supabase
+      let history = [];
+      try {
+        const { data, error } = await supabase
+          .from('quiz_attempts')
+          .select('score,total,topic_stats,taken_at')
+          .eq('user_id', user.id)
+          .order('taken_at', { ascending: false })
+          .limit(50);
+        if (!error && data && data.length > 0) {
+          history = data.map(r => ({
+            date: new Date(r.taken_at).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' }),
+            taken_at: r.taken_at,
+            score: r.score,
+            total: r.total,
+            topics: r.topic_stats
+          }));
+        } else {
+          // Fall back to localStorage
+          history = JSON.parse(localStorage.getItem('cosmo_quiz_history')) || [];
+        }
+      } catch {
+        history = JSON.parse(localStorage.getItem('cosmo_quiz_history')) || [];
+      }
+
+      renderPage(user, history);
+    }
+
+    boot();
+  </script>
+</body>
+</html>
