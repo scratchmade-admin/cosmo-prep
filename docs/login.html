@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In | California Cosmetology Prep</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html">California Cosmetology Prep</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="study-guide.html">Study Guide</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="faq.html">FAQ</a>
+        <a href="cram-plan.html">3-Day Plan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap" style="max-width:440px;margin-top:3rem;">
+      <div class="card" id="auth-card">
+        <h2 id="auth-title">Sign in to sync your progress</h2>
+        <p id="auth-desc" style="color:var(--muted);margin-bottom:1.5rem;">Save quiz history across all your devices — phone, tablet, desktop. Free.</p>
+
+        <div id="auth-error" class="hidden" style="color:#ef4444;font-size:0.85rem;margin-bottom:1rem;"></div>
+
+        <form id="auth-form">
+          <label style="display:block;margin-bottom:0.75rem;">
+            <span style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:0.3rem;">Email</span>
+            <input type="email" id="auth-email" required autocomplete="email"
+              style="width:100%;padding:0.6rem 0.75rem;border:1px solid var(--line);border-radius:8px;font-size:1rem;font-family:inherit;box-sizing:border-box;" />
+          </label>
+          <label style="display:block;margin-bottom:1.25rem;">
+            <span style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:0.3rem;">Password</span>
+            <input type="password" id="auth-password" required autocomplete="current-password"
+              style="width:100%;padding:0.6rem 0.75rem;border:1px solid var(--line);border-radius:8px;font-size:1rem;font-family:inherit;box-sizing:border-box;" />
+          </label>
+          <button class="button button-primary" type="submit" id="auth-submit" style="width:100%;">Sign in</button>
+        </form>
+
+        <p style="margin-top:1rem;font-size:0.85rem;text-align:center;">
+          <span id="toggle-text">No account? </span>
+          <a href="#" id="auth-toggle" style="color:var(--primary);font-weight:600;">Create one</a>
+        </p>
+        <p style="margin-top:0.5rem;font-size:0.85rem;text-align:center;">
+          <a href="#" id="forgot-link" style="color:var(--muted);">Forgot password?</a>
+        </p>
+      </div>
+
+      <div id="check-email-card" class="card hidden" style="text-align:center;">
+        <h2>Check your email</h2>
+        <p>We sent a password reset link to <strong id="reset-email-display"></strong>.</p>
+        <p style="color:var(--muted);font-size:0.85rem;">Check your spam folder if it doesn't arrive within a minute.</p>
+        <a class="button button-secondary" href="login.html" style="margin-top:1rem;display:inline-block;">Back to sign in</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">California Cosmetology Prep is an independent study resource. Not affiliated with or endorsed by the California Board of Barbering and Cosmetology.</div>
+  </footer>
+
+  <script src="supabase.js"></script>
+  <script>
+    const REDIRECT = 'quiz.html';
+    let mode = 'signin'; // 'signin' | 'signup' | 'reset'
+
+    const form        = document.getElementById('auth-form');
+    const emailInput  = document.getElementById('auth-email');
+    const passInput   = document.getElementById('auth-password');
+    const submitBtn   = document.getElementById('auth-submit');
+    const toggleLink  = document.getElementById('auth-toggle');
+    const toggleText  = document.getElementById('toggle-text');
+    const forgotLink  = document.getElementById('forgot-link');
+    const errorEl     = document.getElementById('auth-error');
+    const titleEl     = document.getElementById('auth-title');
+    const descEl      = document.getElementById('auth-desc');
+
+    function showError(msg) {
+      errorEl.textContent = msg;
+      errorEl.classList.remove('hidden');
+    }
+    function clearError() { errorEl.classList.add('hidden'); }
+
+    toggleLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      clearError();
+      if (mode === 'signin') {
+        mode = 'signup';
+        titleEl.textContent = 'Create an account';
+        descEl.textContent = 'Free. Syncs your quiz history across phone, tablet, and desktop.';
+        submitBtn.textContent = 'Create account';
+        toggleText.textContent = 'Already have one? ';
+        toggleLink.textContent = 'Sign in';
+        forgotLink.classList.add('hidden');
+      } else {
+        mode = 'signin';
+        titleEl.textContent = 'Sign in to sync your progress';
+        descEl.textContent = 'Save quiz history across all your devices — phone, tablet, desktop. Free.';
+        submitBtn.textContent = 'Sign in';
+        toggleText.textContent = 'No account? ';
+        toggleLink.textContent = 'Create one';
+        forgotLink.classList.remove('hidden');
+      }
+    });
+
+    forgotLink.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const email = emailInput.value.trim();
+      if (!email) { showError('Enter your email first.'); return; }
+      clearError();
+      submitBtn.disabled = true;
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: window.location.origin + '/login.html'
+      });
+      submitBtn.disabled = false;
+      if (error) { showError(error.message); return; }
+      document.getElementById('reset-email-display').textContent = email;
+      document.getElementById('auth-card').classList.add('hidden');
+      document.getElementById('check-email-card').classList.remove('hidden');
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      clearError();
+      submitBtn.disabled = true;
+      submitBtn.textContent = mode === 'signup' ? 'Creating...' : 'Signing in...';
+
+      const email    = emailInput.value.trim();
+      const password = passInput.value;
+
+      let error;
+      if (mode === 'signup') {
+        ({ error } = await supabase.auth.signUp({ email, password }));
+      } else {
+        ({ error } = await supabase.auth.signInWithPassword({ email, password }));
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = mode === 'signup' ? 'Create account' : 'Sign in';
+
+      if (error) { showError(error.message); return; }
+      window.location.href = REDIRECT;
+    });
+
+    // If already signed in, go straight to quiz
+    supabase.auth.getSession().then(({ data }) => {
+      if (data.session) window.location.href = REDIRECT;
+    });
+  </script>
+</body>
+</html>

@@ -421,6 +421,20 @@ footer {
 .confidence-btn.selected[data-confidence="unsure"] { background: #fef9c3; border-color: #fde047; }
 .confidence-btn.selected[data-confidence="guess"]  { background: #fee2e2; border-color: #fca5a5; }
 
+/* ── Auth chip ── */
+.auth-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: var(--surface-soft);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+}
+
 /* ── History panel ── */
 .history-card { margin-bottom: 1.5rem; }
 .history-header {
