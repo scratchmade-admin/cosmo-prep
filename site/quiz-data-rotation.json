@@ -838,5 +838,593 @@
     "correct": "C",
     "explanation": "Safety and hair integrity come before aggressive processing goals.",
     "difficulty": "Hard"
+  },
+  {
+    "id": 261,
+    "topic": "sanitation",
+    "prompt": "What is the best reason to wear gloves during a service when needed?",
+    "options": {
+      "A": "To improve haircut balance",
+      "B": "To protect against exposure to chemicals or body fluids",
+      "C": "To shorten processing time",
+      "D": "To keep the client warm"
+    },
+    "correct": "B",
+    "explanation": "Gloves are a barrier that helps protect both the service provider and client in certain procedures.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 262,
+    "topic": "sanitation",
+    "prompt": "Which item is most likely considered porous?",
+    "options": {
+      "A": "Glass mixing bowl",
+      "B": "Stainless steel shears",
+      "C": "Wooden applicator stick",
+      "D": "Metal clip"
+    },
+    "correct": "C",
+    "explanation": "Wood is porous and is not disinfected the same way as nonporous surfaces.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 263,
+    "topic": "sanitation",
+    "prompt": "Why should clean tools be stored in a clean, covered place when required?",
+    "options": {
+      "A": "To make the station look expensive",
+      "B": "To avoid recontamination before use",
+      "C": "To keep tools warm",
+      "D": "To reduce product use"
+    },
+    "correct": "B",
+    "explanation": "Proper storage helps keep sanitized items from becoming contaminated again.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 264,
+    "topic": "sanitation",
+    "prompt": "If a client has an open cut in the service area, the safest response is to:",
+    "options": {
+      "A": "Continue if the client signs a waiver",
+      "B": "Cover it with haircolor",
+      "C": "Follow proper safety procedure and avoid unsafe service conditions",
+      "D": "Ignore it if it is small"
+    },
+    "correct": "C",
+    "explanation": "Open wounds raise infection risk and require safe professional judgment.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 265,
+    "topic": "sanitation",
+    "prompt": "What is the biggest mistake in sanitation questions on written exams?",
+    "options": {
+      "A": "Choosing the most fashionable option",
+      "B": "Choosing speed over safety",
+      "C": "Choosing the oldest tool first",
+      "D": "Choosing the answer with the longest wording"
+    },
+    "correct": "B",
+    "explanation": "On safety questions, the better answer is usually the one that prevents contamination and protects people.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 266,
+    "topic": "law-and-safety",
+    "prompt": "Consumer protection in salon law is mainly about:",
+    "options": {
+      "A": "Helping salons avoid cleaning duties",
+      "B": "Protecting the public through safe and lawful practice",
+      "C": "Allowing any service if the client requests it",
+      "D": "Eliminating consultations"
+    },
+    "correct": "B",
+    "explanation": "Licensing laws and safety rules are meant to protect the public.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 267,
+    "topic": "law-and-safety",
+    "prompt": "What is the best reason to perform a careful client record or consultation note when used in practice?",
+    "options": {
+      "A": "To replace sanitation rules",
+      "B": "To support safe, consistent service decisions",
+      "C": "To make the haircut longer",
+      "D": "To avoid speaking with the client"
+    },
+    "correct": "B",
+    "explanation": "Good documentation can support safer service planning and follow-up.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 268,
+    "topic": "shampoo-and-draping",
+    "prompt": "Before shampooing, you should first:",
+    "options": {
+      "A": "Begin vigorous scrubbing",
+      "B": "Analyze the hair and scalp as appropriate",
+      "C": "Apply relaxer",
+      "D": "Use the hottest water possible"
+    },
+    "correct": "B",
+    "explanation": "A quick analysis helps identify contraindications and product needs.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 269,
+    "topic": "shampoo-and-draping",
+    "prompt": "The main purpose of conditioner is to:",
+    "options": {
+      "A": "Lighten the hair",
+      "B": "Improve manageability and condition",
+      "C": "Permanently straighten the hair",
+      "D": "Replace shampoo"
+    },
+    "correct": "B",
+    "explanation": "Conditioners help improve the feel, moisture balance, and manageability of hair.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 270,
+    "topic": "shampoo-and-draping",
+    "prompt": "During scalp massage, the cosmetologist should avoid:",
+    "options": {
+      "A": "Using controlled movements",
+      "B": "Keeping the client comfortable",
+      "C": "Scratching the scalp with the nails",
+      "D": "Supporting the head properly"
+    },
+    "correct": "C",
+    "explanation": "Nails can injure the scalp. Scalp massage should be gentle and controlled.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 271,
+    "topic": "shampoo-and-draping",
+    "prompt": "If a client has an obvious scalp abrasion, the best response is to:",
+    "options": {
+      "A": "Shampoo more firmly over the area",
+      "B": "Ignore it if the client is late",
+      "C": "Use safe judgment and avoid unsafe service over the affected area",
+      "D": "Cover it with thick conditioner only"
+    },
+    "correct": "C",
+    "explanation": "Broken skin is a contraindication that may require postponing or modifying service.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 272,
+    "topic": "shampoo-and-draping",
+    "prompt": "Which action best prevents water from running into the client's face during shampooing?",
+    "options": {
+      "A": "Tilting the client forward carelessly",
+      "B": "Supporting proper head position at the bowl",
+      "C": "Applying more shampoo sooner",
+      "D": "Using extra-hot water"
+    },
+    "correct": "B",
+    "explanation": "Proper positioning improves comfort and control at the shampoo bowl.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 273,
+    "topic": "shampoo-and-draping",
+    "prompt": "Tangles should generally be handled:",
+    "options": {
+      "A": "By pulling quickly from the scalp",
+      "B": "With rough brushing while wet",
+      "C": "Gently to reduce breakage",
+      "D": "Only after teasing the hair"
+    },
+    "correct": "C",
+    "explanation": "Gentle detangling helps avoid unnecessary stress on the hair.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 274,
+    "topic": "shampoo-and-draping",
+    "prompt": "What is the best reason to choose the right shampoo for the service?",
+    "options": {
+      "A": "To make the bottle empty faster",
+      "B": "To match the hair and scalp condition",
+      "C": "To avoid client consultation",
+      "D": "To replace sanitation rules"
+    },
+    "correct": "B",
+    "explanation": "Product choice should fit the client's needs and scalp condition.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 275,
+    "topic": "haircutting",
+    "prompt": "Overdirection is used mainly to:",
+    "options": {
+      "A": "Sanitize shears",
+      "B": "Increase length in a specific area and control shape",
+      "C": "Lower pH",
+      "D": "Replace sectioning"
+    },
+    "correct": "B",
+    "explanation": "Overdirection changes the way weight and length are distributed in a haircut.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 276,
+    "topic": "haircutting",
+    "prompt": "Consistent tension during haircutting helps create:",
+    "options": {
+      "A": "Uneven results",
+      "B": "Better control and more even cutting",
+      "C": "Faster chemical processing",
+      "D": "Stronger disinfection"
+    },
+    "correct": "B",
+    "explanation": "Even tension supports accuracy and balance in the haircut.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 277,
+    "topic": "haircutting",
+    "prompt": "Graduation is typically associated with elevation around:",
+    "options": {
+      "A": "0 degrees only",
+      "B": "1 to 45 degrees",
+      "C": "90 degrees only",
+      "D": "180 degrees only"
+    },
+    "correct": "B",
+    "explanation": "Graduation builds weight through moderate elevation below 90 degrees.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 278,
+    "topic": "haircutting",
+    "prompt": "The purpose of sectioning is to:",
+    "options": {
+      "A": "Confuse the haircut pattern",
+      "B": "Organize the hair for control and accuracy",
+      "C": "Replace guidelines",
+      "D": "Make hair grow faster"
+    },
+    "correct": "B",
+    "explanation": "Clean sectioning helps maintain order and precision during cutting and styling.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 279,
+    "topic": "styling",
+    "prompt": "Which is the best reason to avoid excessive heat on fragile hair?",
+    "options": {
+      "A": "It makes shampoo unnecessary",
+      "B": "It can cause dryness, breakage, or scorch damage",
+      "C": "It improves elasticity too much",
+      "D": "It strengthens weak hair immediately"
+    },
+    "correct": "B",
+    "explanation": "Overheating can damage already fragile hair.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 280,
+    "topic": "styling",
+    "prompt": "Blow-dry styling should direct airflow in a controlled way mainly to:",
+    "options": {
+      "A": "Reduce all need for sectioning",
+      "B": "Shape the style while managing frizz and movement",
+      "C": "Replace haircutting technique",
+      "D": "Raise the pH permanently"
+    },
+    "correct": "B",
+    "explanation": "Controlled airflow helps smooth or shape the hair depending on the technique.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 281,
+    "topic": "haircutting",
+    "prompt": "A blunt haircut is known for:",
+    "options": {
+      "A": "Even perimeter and strong weight line",
+      "B": "Maximum layering at 180 degrees",
+      "C": "Chemical texture change",
+      "D": "No guideline use"
+    },
+    "correct": "A",
+    "explanation": "Blunt cuts are usually one length with a solid shape and perimeter weight.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 282,
+    "topic": "haircutting",
+    "prompt": "Long layers generally remove more weight than a blunt cut because they use:",
+    "options": {
+      "A": "Higher elevation",
+      "B": "Less combing",
+      "C": "More shampoo",
+      "D": "Lower pH"
+    },
+    "correct": "A",
+    "explanation": "Higher elevation produces more layering and less perimeter weight.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 283,
+    "topic": "chemical-services",
+    "prompt": "Semi-permanent color generally does what compared with permanent color?",
+    "options": {
+      "A": "Usually coats the hair more and does not lighten as strongly",
+      "B": "Permanently straightens the hair",
+      "C": "Breaks disulfide bonds",
+      "D": "Requires a stronger neutralizer"
+    },
+    "correct": "A",
+    "explanation": "Semi-permanent color usually deposits color without the same lift action as permanent color.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 284,
+    "topic": "chemical-services",
+    "prompt": "If a client wants major lightening on previously damaged hair, the safest test answer is to:",
+    "options": {
+      "A": "Promise full results in one session no matter what",
+      "B": "Ignore the condition and proceed quickly",
+      "C": "Reassess, explain the risk, and choose the safer plan",
+      "D": "Use the strongest formula available immediately"
+    },
+    "correct": "C",
+    "explanation": "Safety and hair integrity come before aggressive processing goals.",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 285,
+    "topic": "skin-and-nails",
+    "prompt": "The outermost layer of the skin is the:",
+    "options": {
+      "A": "Dermis",
+      "B": "Epidermis",
+      "C": "Subcutaneous tissue",
+      "D": "Matrix"
+    },
+    "correct": "B",
+    "explanation": "The epidermis is the outer protective layer of the skin.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 286,
+    "topic": "skin-and-nails",
+    "prompt": "A contraindication for a facial service might include:",
+    "options": {
+      "A": "Healthy, unbroken skin",
+      "B": "Severe irritation or open lesions in the service area",
+      "C": "Dry lips only",
+      "D": "A request for moisturizer"
+    },
+    "correct": "B",
+    "explanation": "Open or irritated skin may make service unsafe and require postponement or referral.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 287,
+    "topic": "skin-and-nails",
+    "prompt": "The matrix in nail structure is important because it:",
+    "options": {
+      "A": "Shapes the free edge only",
+      "B": "Produces nail cells for growth",
+      "C": "Replaces the cuticle oil",
+      "D": "Controls finger bones"
+    },
+    "correct": "B",
+    "explanation": "The matrix is the growth area that forms new nail cells.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 288,
+    "topic": "skin-and-nails",
+    "prompt": "Which practice is safest in manicure services?",
+    "options": {
+      "A": "Using the same disposable file on many clients",
+      "B": "Cutting living skin aggressively",
+      "C": "Following infection-control procedures for all tools and surfaces",
+      "D": "Ignoring small cuts"
+    },
+    "correct": "C",
+    "explanation": "Nail services require careful infection control because tools and skin contact create contamination risk.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 289,
+    "topic": "skin-and-nails",
+    "prompt": "If a client has visible signs of nail infection, the cosmetologist should generally:",
+    "options": {
+      "A": "Perform the service carefully anyway",
+      "B": "Apply acrylic immediately",
+      "C": "Avoid the service and refer appropriately",
+      "D": "File the nail thinner first"
+    },
+    "correct": "C",
+    "explanation": "Suspected infection is a reason to avoid normal cosmetic service.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 290,
+    "topic": "skin-and-nails",
+    "prompt": "The free edge of the nail is the part that:",
+    "options": {
+      "A": "Produces the nail plate",
+      "B": "Extends beyond the fingertip",
+      "C": "Contains blood vessels and nerves",
+      "D": "Anchors the nail root"
+    },
+    "correct": "B",
+    "explanation": "The free edge is the visible part that extends past the tip of the finger.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 291,
+    "topic": "skin-and-nails",
+    "prompt": "During basic skin care services, exfoliation should be approached carefully because:",
+    "options": {
+      "A": "More friction is always better",
+      "B": "Overdoing it can irritate the skin",
+      "C": "It changes bone structure",
+      "D": "It replaces cleansing"
+    },
+    "correct": "B",
+    "explanation": "Excessive exfoliation can leave skin irritated and vulnerable.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 292,
+    "topic": "skin-and-nails",
+    "prompt": "Which answer best fits written-exam thinking for skin and nail questions?",
+    "options": {
+      "A": "Choose the most aggressive treatment",
+      "B": "Choose the safest sanitary option and avoid servicing contraindications",
+      "C": "Choose the option that uses the most tools",
+      "D": "Choose the trendiest method"
+    },
+    "correct": "B",
+    "explanation": "Safety and sanitation are strong clues in skin and nail questions too.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 293,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "The study of the structure of the body is called:",
+    "options": {
+      "A": "Anatomy",
+      "B": "Ecology",
+      "C": "Pigmentation",
+      "D": "Sanitation"
+    },
+    "correct": "A",
+    "explanation": "Anatomy focuses on body structure.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 294,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "The study of how body parts work is called:",
+    "options": {
+      "A": "Geometry",
+      "B": "Physiology",
+      "C": "Histology only",
+      "D": "Draping"
+    },
+    "correct": "B",
+    "explanation": "Physiology is the study of body function.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 295,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "A substance with a pH below 7 is:",
+    "options": {
+      "A": "Neutral",
+      "B": "Acidic",
+      "C": "Alkaline",
+      "D": "Metallic"
+    },
+    "correct": "B",
+    "explanation": "pH values below 7 are acidic.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 296,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "A substance with a pH above 7 is:",
+    "options": {
+      "A": "Acidic",
+      "B": "Neutral",
+      "C": "Alkaline",
+      "D": "Sterile"
+    },
+    "correct": "C",
+    "explanation": "Values above 7 are alkaline, also called basic.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 297,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "An emulsion is a mixture of:",
+    "options": {
+      "A": "Two substances that normally do not stay mixed without help",
+      "B": "Only solid chemicals",
+      "C": "Hair and metal",
+      "D": "Pure water and nothing else"
+    },
+    "correct": "A",
+    "explanation": "Emulsions combine substances like oil and water with help from an emulsifier.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 298,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "Oxidation-reduction reactions are important in cosmetology because they are involved in:",
+    "options": {
+      "A": "License display only",
+      "B": "Many chemical services such as haircolor processing",
+      "C": "Folding towels only",
+      "D": "Station setup only"
+    },
+    "correct": "B",
+    "explanation": "Redox chemistry is part of how some chemical services work, especially color changes.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 299,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "A solution is best described as:",
+    "options": {
+      "A": "A uniform mixture in which ingredients are evenly dissolved",
+      "B": "Any dirty liquid",
+      "C": "A haircutting line",
+      "D": "A nail disorder"
+    },
+    "correct": "A",
+    "explanation": "In a solution, ingredients are dissolved evenly throughout.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 300,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "When two multiple-choice answers seem close, the best exam strategy is to choose the one that is:",
+    "options": {
+      "A": "More extreme",
+      "B": "Safer and more professionally sound",
+      "C": "Longer in wording",
+      "D": "More expensive"
+    },
+    "correct": "B",
+    "explanation": "Safety and professionalism are strong decision clues on licensing-style exams.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 301,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "If you do not know an answer right away, a smart test strategy is to:",
+    "options": {
+      "A": "Leave every hard question blank and stop",
+      "B": "Panic and change all earlier answers",
+      "C": "Eliminate clearly wrong choices and make the best remaining choice",
+      "D": "Pick the first answer every time"
+    },
+    "correct": "C",
+    "explanation": "Elimination improves accuracy and helps you make better guesses when needed.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 302,
+    "topic": "anatomy-and-chemistry",
+    "prompt": "Which habit is most helpful when preparing for a written cosmetology exam?",
+    "options": {
+      "A": "Memorizing only brand names",
+      "B": "Practicing questions and reviewing why answers are correct",
+      "C": "Skipping sanitation because it is obvious",
+      "D": "Focusing only on haircutting terms"
+    },
+    "correct": "B",
+    "explanation": "Repetition plus explanation review builds judgment, not just memorization.",
+    "difficulty": "Easy"
   }
 ]

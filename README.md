@@ -24,10 +24,12 @@ bank, 60 questions — quiz.html fetches this).
 - `study-guide-expansion-draft.md` — richer Module 3–4 teaching content.
 - `quiz-bank-100-draft.md` — 100 drafted questions.
 
-## ⚠️ Pending work (don't lose this)
+## Pending work (don't lose this)
 
-1. **Migrate the remaining ~40 questions** from `quiz-bank-100-draft.md` into
-   `site/quiz-data-rotation.json` (~60 of 100 are currently live, renumbered to IDs 201–260).
+1. ✅ **DONE — Quiz bank migrated.** All 100 drafted questions are now live: `quiz-data-rotation.json`
+   holds **102 questions across 9 topics** (IDs 201–302). This added the previously-missing
+   **Skin & Nails** (8) and **Anatomy & Chemistry** (10) topics; the quiz engine's `targetMix` and
+   `topicLabels` in `site/quiz.html` were rebalanced to a 20-question spread across all 9 topics.
 2. **Integrate `study-guide-expansion-draft.md`** into `site/study-guide.html` (deeper Module 3–4
    content not yet on the live site).
 3. **Work `next-improvements-plan.md` items #1–3** (post-quiz "what to study next", anchor links
