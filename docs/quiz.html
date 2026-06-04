@@ -15,6 +15,7 @@
         <a href="study-guide.html">Study Guide</a>
         <a class="active" href="quiz.html">Quiz</a>
         <a href="faq.html">FAQ</a>
+        <a href="cram-plan.html">3-Day Plan</a>
       </nav>
     </div>
   </header>
@@ -35,8 +36,20 @@
             <span class="pill">Instant scoring</span>
             <span class="pill">Topic feedback</span>
           </div>
+          <div class="mode-toggle">
+            <label class="toggle-label">
+              <input type="checkbox" id="timed-toggle" />
+              <span>Timed mode <span class="muted">(20 min)</span></span>
+            </label>
+          </div>
           <h2>Practice quiz</h2>
           <p id="quiz-intro">Loading a fresh mixed set...</p>
+          <div id="timer-bar" class="hidden">
+            <div class="timer-display">
+              <span id="timer-text">20:00</span>
+              <span class="muted"> remaining</span>
+            </div>
+          </div>
         </article>
 
         <form id="quiz-form"></form>
@@ -45,6 +58,7 @@
           <h2>Your results</h2>
           <p id="quiz-score" class="lead"></p>
           <p id="quiz-summary"></p>
+          <p id="confidence-note" class="hidden" style="margin-top:0.5rem;font-style:italic;color:var(--accent);"></p>
           <div id="topic-breakdown" class="grid-2"></div>
           <div id="study-next" class="card" style="margin-top:1.5rem;"></div>
           <div class="quiz-controls" style="margin-top: 18px;">
@@ -173,22 +187,40 @@
           <div class="kicker">Question ${index + 1} • ${topicLabels[question.topic] || question.topic} • ${question.difficulty}</div>
           <h3>${question.prompt}</h3>
           ${optionsHtml}
+          <div class="confidence-row hidden">
+            <span class="confidence-label">How sure are you?</span>
+            <button type="button" class="confidence-btn" data-confidence="sure">Sure</button>
+            <button type="button" class="confidence-btn" data-confidence="unsure">Unsure</button>
+            <button type="button" class="confidence-btn" data-confidence="guess">Guess</button>
+          </div>
           <div class="quiz-feedback hidden">
             <p><strong>Correct answer:</strong> ${question.correct}</p>
             <p>${question.explanation}</p>
           </div>
           <input type="hidden" name="q${index}" value="" />
+          <input type="hidden" name="c${index}" value="" />
         `;
 
         form.appendChild(article);
 
-        const hiddenInput = article.querySelector('input[type="hidden"]');
+        const hiddenInput = article.querySelector('input[name="q' + index + '"]');
+        const confidenceInput = article.querySelector('input[name="c' + index + '"]');
+        const confidenceRow = article.querySelector('.confidence-row');
         const options = Array.from(article.querySelectorAll('.quiz-option'));
         options.forEach((option) => {
           option.addEventListener('click', () => {
             options.forEach((btn) => btn.classList.remove('selected'));
             option.classList.add('selected');
             hiddenInput.value = option.dataset.value;
+            confidenceRow.classList.remove('hidden');
+          });
+        });
+        const confidenceBtns = Array.from(article.querySelectorAll('.confidence-btn'));
+        confidenceBtns.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            confidenceBtns.forEach((b) => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            confidenceInput.value = btn.dataset.confidence;
           });
         });
       });
@@ -212,6 +244,7 @@
         .map(([topic, count]) => `${topicLabels[topic] || topic} (${count})`)
         .join(' • ');
       introText.textContent = `This set is weighted toward the high-value written-exam topics. In this round: ${summary}.`;
+      startTimer();
     }
 
     function buildSummary(score, answered) {
@@ -270,14 +303,18 @@
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
+      stopTimer();
 
       let score = 0;
       let answered = 0;
+      let luckyGuesses = 0;
+      let shakyCorrected = 0;
       const topicStats = {};
 
       Array.from(document.querySelectorAll('.question')).forEach((questionEl, index) => {
         const q = currentQuestions[index];
-        const chosen = questionEl.querySelector('input[type="hidden"]').value;
+        const chosen = questionEl.querySelector('input[name="q' + index + '"]').value;
+        const confidence = questionEl.querySelector('input[name="c' + index + '"]').value;
         const options = Array.from(questionEl.querySelectorAll('.quiz-option'));
         const feedback = questionEl.querySelector('.quiz-feedback');
 
@@ -291,9 +328,12 @@
         });
 
         if (chosen) answered += 1;
-        if (chosen === q.correct) {
+        const isCorrect = chosen === q.correct;
+        if (isCorrect) {
           score += 1;
           topicStats[q.topic].correct += 1;
+          if (confidence === 'guess') luckyGuesses += 1;
+          if (confidence === 'unsure') shakyCorrected += 1;
         }
 
         feedback.classList.remove('hidden');
@@ -301,13 +341,54 @@
 
       scoreText.textContent = `${score} out of ${currentQuestions.length}`;
       summaryText.textContent = buildSummary(score, answered);
+
+      const confidenceNote = document.getElementById('confidence-note');
+      const notes = [];
+      if (luckyGuesses > 0) notes.push(`You guessed correctly on ${luckyGuesses} question${luckyGuesses > 1 ? 's' : ''} — review those too, the knowledge isn't solid yet.`);
+      if (shakyCorrected > 0) notes.push(`You marked ${shakyCorrected} correct answer${shakyCorrected > 1 ? 's' : ''} as unsure — worth a quick re-read to build confidence.`);
+      confidenceNote.textContent = notes.join(' ');
+      confidenceNote.classList.toggle('hidden', notes.length === 0);
+
       buildTopicBreakdown(topicStats);
       buildStudyNext(topicStats);
       resultBox.classList.remove('hidden');
       resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 
-    resetButton.addEventListener('click', () => renderQuiz());
+    let timerInterval = null;
+    const timedToggle = document.getElementById('timed-toggle');
+    const timerBar = document.getElementById('timer-bar');
+    const timerText = document.getElementById('timer-text');
+    const TIMER_SECONDS = 20 * 60;
+
+    function formatTime(s) {
+      const m = Math.floor(s / 60);
+      const sec = s % 60;
+      return `${m}:${sec.toString().padStart(2, '0')}`;
+    }
+
+    function startTimer() {
+      if (!timedToggle.checked) return;
+      let remaining = TIMER_SECONDS;
+      timerBar.classList.remove('hidden');
+      timerText.textContent = formatTime(remaining);
+      timerInterval = setInterval(() => {
+        remaining -= 1;
+        timerText.textContent = formatTime(remaining);
+        timerText.style.color = remaining <= 60 ? 'var(--accent)' : '';
+        if (remaining <= 0) {
+          clearInterval(timerInterval);
+          form.requestSubmit();
+        }
+      }, 1000);
+    }
+
+    function stopTimer() {
+      clearInterval(timerInterval);
+      timerBar.classList.add('hidden');
+    }
+
+    resetButton.addEventListener('click', () => { stopTimer(); renderQuiz(); });
     newSetButton.addEventListener('click', () => {
       currentQuestions = buildQuestionSet();
       renderQuiz();
